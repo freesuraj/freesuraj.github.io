@@ -30,19 +30,19 @@
 			</a>
 		</li>
 		{% endif %}
-		{% if site.author.email %}
+		{% if site.author.about %}
 		<li>
-			<a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}">
-				<i class="fa fa-envelope fa-lg"></i>
+			<a class="btn btn-default btn-sm" href="/{{ site.author.about }}">
+				<i class="fa fa-info-circle fa-lg"></i>
 			</a>
 		</li>
 		{% endif %}
 	</ul>
 	<ul id="contact-list-secondary" class="list-unstyled list-inline">
-		{% if site.author.about %}
+		{% if site.author.email %}
 		<li>
-			<a class="btn btn-default btn-sm" href="/{{ site.author.about }}">
-				<i class="fa fa-info-circle fa-lg"></i>
+			<a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}">
+				<i class="fa fa-envelope fa-lg"></i>
 			</a>
 		</li>
 		{% endif %}

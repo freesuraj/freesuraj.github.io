@@ -54,9 +54,9 @@
 				<i class="fa fa-twitter"></i>
 			</a>
 			{% endif %}
-			{% if site.author.email %}
-			<a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
-				<i class="fa fa-envelope"></i>
+			{% if site.author.about %}
+			<a type="button" class="navbar-toggle nav-link" href="{{ site.BASE_PATH}}/{{ site.about_path }}">
+				<i class="fa fa-info-circle"></i>
 			</a>
 			{% endif %}
 			<a class="navbar-brand" href="{{ site.BASE_PATH }}/">
@@ -84,7 +84,6 @@
 			<li><a href="{{ site.BASE_PATH}}/"><i class="fa fa-home"></i>Home</a></li>
 			<li><a href="{{ site.BASE_PATH}}/{{ site.categories_path }}"><i class="fa fa-folder"></i>Categories</a></li>
 			<li><a href="{{ site.BASE_PATH}}/{{ site.tags_path }}"><i class="fa fa-tags"></i>Tags</a></li>
-			<li class="divider"></li>
 			<li><a href="{{ site.BASE_PATH}}/{{ site.about_path }}"><i class="fa fa-info-circle"></i>About me</a></li>
 		</ul>
 	</div>
