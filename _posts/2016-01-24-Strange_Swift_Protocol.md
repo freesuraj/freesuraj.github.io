@@ -7,7 +7,6 @@ fullview: true
 ---
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 
-```
 
     import Foundation
 
@@ -46,4 +45,3 @@ Swift protocol is very interesting yet very weird. Sometimes it behaves very str
 
         return myArray
     }
-```
