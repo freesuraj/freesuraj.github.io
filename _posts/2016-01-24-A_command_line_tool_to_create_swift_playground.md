@@ -18,14 +18,15 @@ fullview: true
 A command line application to quickly create and launch a Xcode playground.
 
 ### Installation
-```
+~~~
 npm install -g swiftplayground
 
-```
+~~~
 ### Usage
 
-```
+~~~
 $ swiftplayground --help
+~~~
 
 Usage: swiftplayground [options]
 
@@ -36,10 +37,13 @@ Usage: swiftplayground [options]
     -n, --name [filename]  Name of the swift playground [SwiftPlayground]
 
 Example
+~~~
      $ swiftplayground -n FILENAME
+~~~
 
 Creates a new playground named FILENAME.playground in the current directory
-```
+
+
 ### Screenshots
 ![command_line](https://github.com/freesuraj/playground/blob/master/assets/screenshots/Screenshot%202016-01-17%2023.35.55.png?raw=true)
 
