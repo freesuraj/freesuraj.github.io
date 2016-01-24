@@ -3,7 +3,7 @@ layout: post
 title: Strange Swift Protocol
 categories: [Swift, Coding]
 tags: [Swift, Coding]
-fullview: false
+fullview: true
 ---
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 
