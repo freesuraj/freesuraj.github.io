@@ -5,9 +5,6 @@ categories: [Swift, Coding]
 tags: [Swift, Coding]
 fullview: true
 ---
-
-## A test markdown
-
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 
 ```swift
