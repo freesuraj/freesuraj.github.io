@@ -1,3 +1,11 @@
+---
+layout: post
+title:  Tom Brady vs Peyton Manning
+categories: [General]
+tags: [General]
+fullview: true
+---
+
 ### Tom Brady vs Peyton Manning
 
 Today is the 17th time these two greatest QBs of our generation are meeting up.
