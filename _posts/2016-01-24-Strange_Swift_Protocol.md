@@ -11,6 +11,7 @@ fullview: true
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 
 ```swift
+
 import Foundation
 
 protocol Command {}
