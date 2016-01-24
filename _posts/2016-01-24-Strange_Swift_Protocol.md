@@ -8,6 +8,7 @@ fullview: true
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 
 ```
+
     import Foundation
 
     protocol Command {}
