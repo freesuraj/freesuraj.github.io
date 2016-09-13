@@ -1,23 +1,26 @@
 ---
 layout: post
 title: Complex number
-categories: [General]
-tags: [General]
-fullview: true
+description: "Quick tips"
+tags: swift complexNumber
+date: 2016-01-25 14:25:44
 ---
+
+Since a complex number is comprised of a real and imaginary component, two complex numbers are equal if and only if their respective real and imaginary components are equal.
+
+<!--more-->[ ](#){: id="more"}
 
 Complex number
 
-~~~objective-c
+**Complex.swift"
+{% highlight swift %}
 struct Complex<T: SignedNumberType> {
     let real: T
     let imaginary: T
 }
-~~~
+{% endhighlight %}
 
-Since a complex number is comprised of a real and imaginary component, two complex numbers are equal if and only if their respective real and imaginary components are equal:
-
-~~~objective-c
+{% highlight swift %}
 extension Complex: Equatable {}
 
 // MARK: Equatable
@@ -25,4 +28,4 @@ extension Complex: Equatable {}
 func ==<T>(lhs: Complex<T>, rhs: Complex<T>) -> Bool {
     return lhs.real == rhs.real && lhs.imaginary == rhs.imaginary
 }
-~~~
+{% endhighlight %}

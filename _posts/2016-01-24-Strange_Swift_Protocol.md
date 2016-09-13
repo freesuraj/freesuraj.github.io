@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Strange Swift Protocol
-categories: [Swift, Coding]
-tags: [Swift, Coding]
-fullview: true
+description: "Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely."
+tags: swift protocol
+date: 2016-01-24 13:12:11
 ---
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 

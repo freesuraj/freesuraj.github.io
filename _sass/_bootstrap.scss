@@ -1,0 +1,40 @@
+$fontDefault: 'Open Sans';
+$fontEmphasis: $fontDefault;
+$fontArticle: 'Lora';
+$fontMonospace: 'Inconsolata';
+$sizeFont: 18px;
+$sizeFontLg: 24px;
+$sizeFontSm: 16px;
+$sizeMarginLg: 20px;
+$sizeBorderRadius: 3px;
+$sizeNavbar: 50px;
+
+body { padding-top: $sizeNavbar; font-family: $fontDefault; font-size: $sizeFont; }
+b, strong, h1, h2, h3, h4, h5, h6 { font-family: $fontEmphasis; }
+b, strong, h1, h2, h3 { font-weight: 700; }
+a>code { text-decoration: underline; }
+article { font-family: $fontArticle; line-height: 175%; }
+figcaption { text-align: center; font-style: italic; font-size: $sizeFontSm; font-family: $fontDefault; }
+code { font-family: $fontMonospace; }
+pre {
+  word-break: normal;
+  word-wrap: normal;
+  code { white-space: inherit; font-size: $sizeFontSm; }
+}
+.dropdown-menu { min-width: 250px; padding: 10px; font-size: $sizeFontSm; }
+.dropdown-menu>li>a { padding-top: 8px; padding-bottom: 8px; }
+.dropdown-menu-flex>a { padding: 10px; }
+.btn-group .dropdown-menu .fa { width: 18px; margin-right: 8px; }
+.btn { font-family: $fontDefault; }
+.bs-callout { padding: $sizeMarginLg; margin: $sizeMarginLg; border-radius: $sizeBorderRadius; }
+.navbar-toggle { padding-top: 5px; padding-bottom: 5px; }
+@media print {
+  [data-toggle="collapse"] {
+    display: none;
+    visibility: hidden;
+  }
+  .collapse {
+      display: inherit;;
+      visibility: visible;
+  }
+}

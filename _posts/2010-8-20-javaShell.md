@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Running Java from Shell
-categories: [java, code]
-tags: [java, code, setup]
-fullview: true
+description: "Run Java from shell"
+date: 2010-08-20 13:12:13
+tags: java code setup
 ---
 
 Inside shell, you can’t directly run a command like this
