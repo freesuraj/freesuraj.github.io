@@ -5,6 +5,9 @@ description: "Swift protocol is very interesting yet very weird. Sometimes it be
 tags: swift protocol
 date: 2016-01-24 13:12:11
 ---
+
+<div class="cap"></div>
+
 Swift protocol is very interesting yet very weird. Sometimes it behaves very strangely.
 
 ~~~objective-c

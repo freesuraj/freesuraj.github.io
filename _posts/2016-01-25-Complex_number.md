@@ -6,6 +6,8 @@ tags: swift complexNumber
 date: 2016-01-25 14:25:44
 ---
 
+<div class="cap"></div>
+
 Since a complex number is comprised of a real and imaginary component, two complex numbers are equal if and only if their respective real and imaginary components are equal.
 
 <!--more-->[ ](#){: id="more"}
