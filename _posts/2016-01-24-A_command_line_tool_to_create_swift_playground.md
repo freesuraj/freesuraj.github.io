@@ -23,13 +23,13 @@ A command line application to quickly create and launch a Xcode playground.
 ~~~
 npm install -g swiftplayground
 ~~~
+
 ### Usage
 
 ~~~
-$ swiftplayground --help
+$ swiftplayground [Options]
 ~~~
 
-Usage: swiftplayground [options]
 
   Options:
 
@@ -38,6 +38,7 @@ Usage: swiftplayground [options]
     -n, --name [filename]  Name of the swift playground [SwiftPlayground]
 
 Example
+
 ~~~
      $ swiftplayground -n FILENAME
 ~~~
