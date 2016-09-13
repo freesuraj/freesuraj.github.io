@@ -9,12 +9,6 @@ date: 2016-01-24 12:12:13
 ### playground
 A command line application to quickly create and launch a Xcode playground.
 
-### Installation
-~~~
-npm install -g swiftplayground
-
-<!--more-->[ ](#){: id="more"}
-
 [![NPM version][npm-image]][npm-url]
 ![build-status](https://travis-ci.org/freesuraj/playground.svg?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/freesuraj/playground/blob/master/LICENSE.md)
@@ -23,6 +17,11 @@ npm install -g swiftplayground
 [![download  numbers](https://img.shields.io/npm/dt/swiftplayground.svg)](https://www.npmjs.com/package/swiftplayground)
 [![Twitter](https://img.shields.io/badge/twitter-@iosCook-blue.svg?style=flat)](http://twitter.com/iosCook)
 
+<!--more-->[ ](#){: id="more"}
+
+### Installation
+~~~
+npm install -g swiftplayground
 ~~~
 ### Usage
 
