@@ -3,7 +3,7 @@ layout: cv
 title: Suraj Pathak
 description: Suraj Pathak CV
 ---
-# Duy Trung Ha
+# Suraj Pathak
 
 <p class="text-center">
     <a href="mailto:freesuraj@gmail.com">freesuraj@gmail.com</a>
@@ -13,114 +13,141 @@ description: Suraj Pathak CV
 
 ## Summary
 
-Android engineer (2+ years), with past full-stack web development experience in PHP, Ruby and C# (4+ years). My experience includes exposure to Scrum agile framework, unit testing and test-driven development (TDD), behavior-driven development (BDD) and automation. I love writing code as much as testing them.
-
-Outside work, I contribute to open-source projects and technical communities. List of my works can be found in Portfolio section of this document. My notable open-source contributions:
-
-* <https://github.com/hidroh/materialistic> - Android application
-* <https://github.com/hidroh/cucumber-api> - Ruby gem
+I'm an iOS engineer (5+ years) based in Singapore (for now). I love programming in general and hacking in particular. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub.
 
 ## Experience
 
 <div class="row">
     <div class="col-xs-8 section-left">PropertyGuru</div>
-    <div class="col-xs-4 section-right">03/2014 - Present</div>
+    <div class="col-xs-4 section-right">12/2015 - Present</div>
 </div>
 
-*Android Engineer*
+*iOS Engineer*
 
-Develop and ship Android applications for property search (consumer) and management (agent) for South East Asian market: 7 apps in 4 countries, 3 languages
+Develop and ship iOS applications for property search (consumer) and management (agent) for South East Asian market: 7 apps in 4 countries, 3 languages
 
-* Android development in Java using Android SDK, build with Gradle
-* Unit testing with Robolectric, UI automation with Cucumber, Calabash (Ruby)
+* iOS development in Swift and Objective-C
+* Unit testing with XCUnitTest, UI automation XCUITest
 * Continuous integration with Jenkins
 
 <div class="row">
-    <div class="col-xs-8 section-left">PropertyGuru</div>
-    <div class="col-xs-4 section-right">10/2012 - 02/2014</div>
+    <div class="col-xs-8 section-left">Run Social</div>
+    <div class="col-xs-4 section-right">09/2014 - 12/2015</div>
 </div>
 
-*Software Engineer*
+*Mobile Developer*
 
-Develop RESTful web services, search and consumer web products, and mobile site for South East Asian market
+RunSocial’s mission is to help make fitness more fun. For people who love to run on treadmill, RunSocial provides a mobile app where user can choose a route from the list of famous real-world tracks like London Marathon or New York marathon, and start their exercise. RunSocial helps people beat the boredom of running on treadmill.
 
-* Front-end and back-end PHP development: stack includes PHP, Symfony2 framework, MySQL, nginx
-* Unit testing, behavior testing with PHPUnit, Jasmine, Codeception
-* Continuous integration with Jenkins
+In addition to implementating new features, I was involved in two particularly interesting features: deeveloping VOIP service, live-chat for players.
 
 <div class="row">
-    <div class="col-xs-8 section-left">GRC-Systems</div>
-    <div class="col-xs-4 section-right">01/2011 - 05/2012</div>
+    <div class="col-xs-8 section-left">Freelance Hacker</div>
+    <div class="col-xs-4 section-right">02/2014 - 09/2014</div>
 </div>
 
-*Software Engineer*
+*Freelance Hacker*
 
-Develop governance, risk management and compliance Rich-Internet-Application (RIA)
-
-* Full stack C# development: stack includes Microsoft Silverlight, Windows Communication Foundation (WCF), Workflow Foundation (WF), Entity Framework and Windows Azure
-
-(2 recommendations available upon request)
+I served several small to medium sized companies as a freelancer full stack developer developing products ranging from mobile payment, e-Commerce to IOT( Internet of things) and smart home.
 
 <div class="row">
-    <div class="col-xs-8 section-left">Dept of Computer Science, School of Computing, National University of Singapore</div>
-    <div class="col-xs-4 section-right">07/2009 - 11/2010</div>
+    <div class="col-xs-8 section-left">Web Spiders</div>
+    <div class="col-xs-4 section-right">02/2013 - 02/2014</div>
 </div>
 
-*Research Assistant*
+*Senior iOS Developer*
 
-Academic research with focus on software reuse, domain-specific language (DSL) and model-driven development (MDD)
+* Acting as lead iOS developer and working closely with other mobile app developer leading on the other platform development
+* Deliver across the entire app life cycle ­ concept, design, build, deploy, test, release to app stores and support
+* Working directly with developers and product managers to conceptualise, build, test and realise products
+* Gather requirements around functionality and translate those requirements into elegant functional solutions
+* Build prototypes at tech scoping stage of projects
+* Create compelling device specific user interfaces and experiences
+* Optimising performance for the apps
+* Keep up to date on the latest industry trends in the mobile technologies
 
-* 1 publication at top software engineering conference
+<div class="row">
+    <div class="col-xs-8 section-left">Web Spiders</div>
+    <div class="col-xs-4 section-right">02/2013 - 02/2014</div>
+</div>
 
-(1 recommendation available upon request)
+*Mobile Developer*
+
+* Developed iOS mobile application using Objective‐C programming language for various projects ranging from social media, entertainment to lifestyle.
+* Designed of mobile app architecture
+* Tested and maintained of the mobile applications
+* Worked closely with another mobile app developer
+* Worked closely with the design team and server development team
+* Gathered requirements around functionality and translate those requirements into
+elegant functional solutions
+
+<div class="row">
+    <div class="col-xs-8 section-left">Digital Storage Institute, A-Star</div>
+    <div class="col-xs-4 section-right">02/2009 - 11/2011</div>
+</div>
+
+*Research Staff*
+
+Academic research with focus on emerging memory technologies like SSD and PCM
+
+* 3 publication at top academic conferences
 
 ## Education
 
 <div class="row">
     <div class="col-xs-8 section-left">National University of Singapore</div>
-    <div class="col-xs-4 section-right">2012 - 2014</div>
+    <div class="col-xs-4 section-right">2008 - 2011</div>
 </div>
 
 *Master's Degree, Computer Science*
 
 <div class="row">
-    <div class="col-xs-8 section-left">National University of Singapore</div>
-    <div class="col-xs-4 section-right">2005 - 2009</div>
+    <div class="col-xs-8 section-left">Harbin Institute of Technology</div>
+    <div class="col-xs-4 section-right">2004 - 2008</div>
 </div>
 
 *Bachelor's Degree (Honours), Computer Engineering*
 
 ## Personal Details
 
-**Nationality:** Vietnamese
+**Nationality:** Nepalese
 
-* Require Visa sponsorship for US (H1B), UK, Canada and Australia
+* Require Visa sponsorship for US (H1B), UK, Canada
+* Nominated for Australian PR 
 
 **Languages**
 
 * English (Full professional proficiency)
-* Vietnamese (Native or bilingual proficiency)
+* Chinese (Bilingual proficiency)
+* Nepali (Native)
+* Hindi (Fluent)
 
 ## Portfolio
 
-**Materialistic – Android application (open source)**
+**SPPatternLock – iOS Component (open source)**
 
-* <https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic>
-* <https://github.com/hidroh/materialistic>
+* <https://github.com/freesuraj/SPPatternLock>
 
-**tldroid – Android application (open source)**
+**SPAnalogClock – iOS Component (open source)**
 
-* <https://play.google.com/store/apps/details?id=io.github.hidroh.tldroid>
-* <https://github.com/hidroh/tldroid>
+* <https://github.com/freesuraj/SPAnalogClock>
 
-**PropertyGuru Android applications**
+**SPAnalogClock – iOS Component (open source)**
 
-* <https://play.google.com/store/apps/dev?id=6401700705145495118>
+* <https://github.com/freesuraj/SwiftTemplate>
 
-**cucumber-api – Ruby gem (open source)**
+**TLDR – iOS application (open source)**
 
-* <https://rubygems.org/gems/cucumber-api>
-* <https://github.com/hidroh/cucumber-api>
+* <https://github.com/freesuraj/TLDR>
+
+**PropertyGuru iOS applications**
+
+* <https://itunes.apple.com/sg/app/propertyguru-singapore-property/id482524585?mt=8>
+
+**swift-playground – Node Package (open source)**
+
+* <https://www.npmjs.com/package/swiftplayground>
+* <https://github.com/freesuraj/playground>
 
 **PropertyGuru mobile sites**
 
@@ -131,120 +158,41 @@ Academic research with focus on software reuse, domain-specific language (DSL) a
 
 Other works can be found on my website and Github
 
-* <https://hidroh.github.io>
-* <https://github.com/hidroh>
-
-## Projects
-
-<div class="row">
-    <div class="col-xs-8 section-left">Materialistic - Hacker News reader Android application</div>
-    <div class="col-xs-4 section-right">01/2015 - Present</div>
-</div>
-
-<https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic>
-
-This is a personal project where I spend my free time to develop, practice and keep myself up-to-date with latest technologies that I do not have chance to do at work due to product requirements.
-
-Materialistic is an open-source news reader Android application with material design look and feel. The project demonstrates uses of latest Android APIs, dependency injection, supporting different device's orientations, handling dynamic resources switching, and unit testing with Robolectric.
-
-The project is hosted at <https://github.com/hidroh/materialistic>
-
-This project has been featured on Android Weekly issue #144: <http://androidweekly.net/issues/issue-144>
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">cucumber-api - Ruby gem for API JSON response validation in BDD style</div>
-    <div class="col-xs-4 section-right">03/2015 - Present</div>
-</div>
-
-<https://rubygems.org/gems/cucumber-api>
-
-Inspired by cucumber, I developed and published cucumber-api, a Ruby gem extending cucumber, to allow testing and verification of API dependency in BDD style.
-
-Most mobile apps depend on service providers, either via RESTful API, or platform-specific SDKs to consume and manipulate data they provide. Putting cucumber-api as part of automation process allows one to be confident of expectation to external dependency.
-
-The gem is first developed for private use at PropertyGuru, as part of daily automation process, and later cleaned up and published for community use.
-
-The project is hosted at <https://github.com/hidroh/cucumber-api>
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">PropertyGuru Android applications</div>
-    <div class="col-xs-4 section-right">03/2014 – Present</div>
-</div>
-
-<https://play.google.com/store/apps/dev?id=6401700705145495118>
-
-In this regional project, we develop and maintain the most popular property mobile applications for 4 South East Asia countries (Singapore, Malaysia, Thailand, Indonesia), supporting 3 languages. I am a member of the 2-3 developers Android team, and the major contributor, in charge of both consumer (public) and agent (paid) products.
-
-Since joining the team, I have introduced and started unit testing with Robolectric testing framework. Over the course of less than one year, we improve our test coverage from 0% to 90%. I advocated and initiated our cross-platform UI automation with Calabash and Cucumber, setting up API and UI automation tests. I improved our continuous delivery and continuous integration process with Gradle, Jenkins and Github integration, setting up parallel UI automation with multiple devices.
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">PropertyGuru online property portals</div>
-    <div class="col-xs-4 section-right">10/2012 – 02/2014</div>
-</div>
-
-<http://www.propertyguru.com.sg/>
-
-In this regional project, we developed and maintained the most popular online property portals for 4 South East Asia countries (Singapore, Malaysia, Thailand, Indonesia), supporting 3 languages. I was a member of search team, in charge of consumer-facing products.
-
-Since I joined, the team has transformed from a big, traditional development team to a 6-person Scrum development team, with 2-week iteration. We pioneered and actively practiced test-driven development, pair programming and automation testing. We worked closely with other teams to consolidate legacy products, migrated and re-architected in-house legacy framework to the more modern Symfony2 framework, shipped our first ever RESTful web services and mobile sites.
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">kinkie.im - Location-based public chat application</div>
-    <div class="col-xs-4 section-right">06/2013</div>
-</div>
-
-<https://github.com/hidroh/kinkie>
-
-This project is a fun project, started from a 24-hour international hackathon (AngelHack Singapore 2013). Together with 5 other engineers, within 24 hours, we managed to complete a location-based chat application using PHP Laravel framework, (later switched to node.js) and web sockets. The project attracted attention from the hacker crowd as well as the judges, partly due to its controversial name, and we won several sponsor prizes as well as being one of the top 10 finalists of the event.
-
-Following the surprise success, kinkie.im competed in 2 other events in the following months: SeedStars World Singapore and Blackberry App Challenge. I was the lead developer for back-end, using node.js, as well as Blackberry HTML5 application.
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">GRC-Suite: Compliance cloud application</div>
-    <div class="col-xs-4 section-right">01/2011 – 05/2012</div>
-</div>
-
-In this project I was a member of a 5-person development team. We followed strictly Scrum development process, with 1-3 weeks iteration. I initially joined the core platform team to work on cloud-migration project, from in-house local Internet application to Azure cloud application. I then progressed as one of the lead developers of 2 of the most important components of the application (scheduled task manager – client side, and schedule service – server side); in addition to maintaining, enhancing other existing features and implementing new features.
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">Document Management Environment (DME)</div>
-    <div class="col-xs-4 section-right">05/2010 – 11/2010</div>
-</div>
-
-In this project, I developed a productivity tool helping users manage families of similar documents. The usual practice is to capture similarities in templates that must be copied and customized to a new context. DME, implemented as a Word add-on using Visual Studio Tools for Office (VSTO), attempted to automate this manual process.
-
------
-
-<div class="row">
-    <div class="col-xs-8 section-left">Model-Driven Development (MDD) and Flexible Generators</div>
-    <div class="col-xs-4 section-right">09/2008 – 04/2010</div>
-</div>
-
-In this project I addressed the problems that hinder widespread application of MDD and code generators: code generated from models must often be modified by hand. To avoid that developers tend to use models/generators during initial development only, and abandon them during follow up development and maintenance. 
-
-My idea was to allow developers use the full power of models and generators, but at the same time to let them merge manual extensions in a way that any future code re-generations would not override them. The project was recognized internationally with a publication at International Conference on Software Engineering.
+* <https://freesuraj.github.io>
+* <https://github.com/freesuraj>
 
 ## Publications
 
 <div class="row">
-    <div class="col-xs-8 section-left">Flexible Generators for Software Reuse and Evolution</div>
+    <div class="col-xs-8 section-left">Power and endurance aware Flash-PCM memory system</div>
+    <div class="col-xs-4 section-right">07/2011</div>
+</div>
+
+*Green Computing Conference and Workshops (IGCC), 2011 International · Authors: Suraj Pathak, Qingsong Wei, YC Tay*
+
+<http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=6008592>
+
+Two major performance issues of Flash NAND are the write latency for random writes, and the lifetime of NAND chips. Several methods, mainly focusing on the Flash Translation Layer (FTL) or the Flash Buffer Management have been proposed to address these problems. In this paper, we propose an idea of reducing write traffic to Flash by the following steps: First we avoid repeated writes to Flash SSD by finding the redundant writes using a cryptographic HASH cipher. We design a set of acceleration techniques to reduce the latency overhead of this extra computational cost. Then we propose a PCM-based buffer extender for Flash SSD where we write the frequent updates to hot pages of Flash into PCM layer, which allows in-page update. Finally, while merging the PCM updated data to the Flash page, we use a special merging technique to change the flushes into sequential flushes, as sequential writes on Flash are almost thrice as fast as random writes. We maintain the redundant write finder mechanism in PCM. We test our design using a trace-driven simulator. The results show that compared to the traditional design technique, lifetime of Flash SSD can be more than quadrupled, while consuming 20% less power to do so with some improvement in write performance as well.
+
+<div class="row">
+    <div class="col-xs-8 section-left">WAFTL: A Workload Adaptive Flash Translation Layer with Data Partition</div>
     <div class="col-xs-4 section-right">05/2011</div>
 </div>
 
-*ICSE 2011 NIER track · Authors: Duy Trung Ha, Stan Jarzabek*
+*27th IEEE (MSST 2011) Symposium on Massive Storage Systems and Technologies · Authors: Suraj Pathak, Qingsong Wei, Bozhang Go*
 
-<http://dl.acm.org/citation.cfm?id=1985946>
+<http://www.storageconference.org/2011/Papers/Research/6.Wei.pdf>
 
-Developers tend to use models and generators during initial development, but often abandon them later in software evolution and reuse. One reason for that is that code generated from models (e.g., UML) is often manually modified, and changes cannot be easily propagated back to models. Once models become out of sync with code, any future re-generation of code overrides manual modifications. We propose a flexible generator solution that alleviates the above problem. The idea is to let developers weave arbitrary manual modifications into the generation process, rather than modify already generated code. A flexible generator stores specifications of manual modifications in executable form, so that weaving can be automatically re-done any time code is regenerated from modified models. In that way, models and manual modification can evolve independently but in sync with each other, and the generated code never gets directly changed. As a proof of concept, we have already built a flexible generator prototype by a merger of conventional generation system and variability technique to handle manual modifications. We believe a flexible generator approach alleviates an important problem that hinders wide spread adoption of MDD in software practice.
+Current FTL schemes have inevitable limitations in terms of memory requirement, performance, garbage collection overhead, and scalability. To overcome these limitations, we propose a workload adaptive flash translation layer referred to as WAFTL. WAFTL explores either page-level or block-level address mapping for normal data block based on access patterns. Page Mapping Block (PMB) is used to store random data and handle large number of partial updates. Block Mapping Block (BMB) is utilized to store sequential data and lower overall mapping table. PMB or BMB is allocated on demand and the number of PMB or BMB eventually depends on workload. An efficient address mapping is designed to reduce overall mapping table and quickly conduct address translation. WAFTL explores a small part of flash space as Buffer Zone to log writes sequentially and migrate data into BMB or PMB based on threshold. Static and dynamic threshold setting are proposed to balance performance and mapping table size.
+WAFTL has been extensively evaluated under various enterprise workloads. Benchmark results conclusively demonstrate that proposed WAFTL is workload adaptive and achieves up to 80% performance improvement, 83% garbage collection overhead reduction and 50% mapping table reduction compared to existing FTL schemes.
+
+<div class="row">
+    <div class="col-xs-8 section-left">FlashCoop: A Locality-Aware Cooperative Buffer Management for SSD-based Storage Cluster</div>
+    <div class="col-xs-4 section-right">09/2010</div>
+</div>
+
+*39th International Conference on Parallel ProcessingSeptember · Authors: Suraj Pathak, Qingsong Wei, Bozhang Go, YC Tay*
+
+<http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5599244>
+
+Random writes significantly limit the application of flash-based Solid State Drive (SSD) in enterprise environment due to its poor latency, negative impact on SSD lifetime and high garbage collection overhead. To release above limitations, we propose a locality-aware cooperative buffer scheme referred to as FlashCoop (Flash Cooperation), which leverages free memory of neighboring storage server to buffer writes over high speed network. Both temporal and sequential localities of access pattern are exploited in the design of cooperative buffer management. Leveraging the filtering effect of the cooperative buffer, FlashCoop can efficiently shape the I/O request stream and improve the sequentiality of the write accesses passed to the SSD. FlashCoop has been extensively evaluated under various enterprise workloads. Our benchmark results conclusively demonstrate that FlashCoop can achieve 52.3% performance improvement and 56.5% garbage collection overhead reduction compared to the system without FlashCoop.
