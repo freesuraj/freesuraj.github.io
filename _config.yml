@@ -1,35 +1,25 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
-
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: pygments
-markdown: kramdown
-disqus: freesuraj
-google_analytics: UA-56107651-2
-
-defaults:
-  -
-    scope:
-      path: "" # empty string for all files
-    values:
-      title: Suraj Pathak
-
-description: World through a Coder's eyes
-author:
+title: "Suraj's Blog"
+description: Talk Swift Again
+url: https://freesuraj.github.io
+author: Suraj Pathak
+twitter:
+  username: iOSCook
+social:
   name: Suraj Pathak
-  email: freesuraj@gmail.com
-  github: freesuraj
-  twitter: freesuraj
-  pinterest: freesuraj
-  about: about.html
-  linkedin: freesuraj
-  bio: Be genuine, be epic!
-  email_md5: 9548ed5632bc606e4638a2a5fffd836a
+  links:
+    - https://twitter.com/iosCook
+    - https://github.com/freesuraj
+    - https://www.linkedin.com/in/freesuraj
+    - http://stackoverflow.com/users/1198935/suraj-pathak
 
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
-about_path: about.html
+permalink: /:year/:month/:day/:title/
+paginate: 5
+highlighter: rouge
+excerpt_separator: <!--more-->
 
-BASE_PATH:
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'CNAME']

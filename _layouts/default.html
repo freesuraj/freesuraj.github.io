@@ -1,23 +1,129 @@
----
-theme :
-  name : dbyll
----
-{% include default.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% seo %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-{% if site.google_analytics %}
-<!-- Asynchronous Google Analytics snippet -->
-<script>
-  var _gaq = _gaq || [];
-  var pluginUrl =
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
-  _gaq.push(['_trackPageview']);
+  <link rel="shortcut icon" href="//secure.gravatar.com/avatar/9548ed5632bc606e4638a2a5fffd836a?s=16" />
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800|Lora:400,700|Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <script type="text/javascript">
+    function supportLocalStorage() {
+      try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+      } catch (e) {
+        return false;
+      }
+    }
+    if (supportLocalStorage() && localStorage.dark === "true") {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/assets/css/dark.css";
+      document.head.appendChild(link);
+    }
+  </script>
+</head>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<body>
+
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top brand" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="btn btn-link navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="fa fa-bars fa-lg"></i>
+          </a>
+          <a class="navbar-brand" href="/"><i class="fa fa-code fa-lg"></i></a>
+        </div>
+        <ul class="nav navbar-nav collapse navbar-collapse">
+          <li><a href="/archives">Archives</a></li>
+          <li><a href="/tags">Tags</a></li>
+          <!-- <li><a href="/blogroll">Blogroll</a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu-flex">
+              <a href="/about">Me</a>
+              <a href="{{ site.social.links[0] }}" alt="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+              <a href="{{ site.social.links[1] }}" alt="GitHub" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+              <a href="{{ site.social.links[2] }}" alt="LinkedIn" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+              <a href="{{ site.social.links[3] }}" alt="StackOverflow" target="_blank"><i class="fa fa-stack-overflow fa-lg"></i></a>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+          <li>
+            <form id="search-form" method="get" action="/search" class="navbar-form" role="search">
+              <div class="form-group has-feedback">
+                <input id="search-input" type="text" class="form-control-material" name="query" autocomplete="off">
+                <i class="fa fa-search fa-small form-control-feedback"></i>
+              </div>
+            </form>
+          </li>
+          <li><a alt="RSS Feed" href="/feed.xml"><i class="fa fa-rss fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  <div class="clearfix divider"></div>
+  <footer>
+    <div class="text-center small">
+      <p>
+        Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}<br />
+        Powered by <a href="https://jekyllrb.com">Jekyll</a>
+      </p>
+      <p>
+        <a href="" id="theme">Switch to dark theme</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $("nav").click(function(evt) {
+      if ("DIV" !== evt.target.tagName) { return true; }
+      $("html,body").animate({ scrollTop: 0 }, "fast");
+      return true;
+    });
+    $("#theme").click(function() {
+      if (supportLocalStorage()) {
+        localStorage.dark = localStorage.dark === "true" ? "false" : "true";
+      }
+      location.reload();
+    });
+    if (supportLocalStorage() && localStorage.dark === "true") {
+      $("#theme").text("Switch to light theme");
+      $("meta[name='theme-color']").attr("content", "#263238");
+    }
+  </script>
+{% if jekyll.environment != "development" %}
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W6HGD6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W6HGD6');</script>
+  <!-- End Google Tag Manager -->
 {% endif %}
+
+</body>
+</html>

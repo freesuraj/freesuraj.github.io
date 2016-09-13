@@ -1,10 +1,19 @@
 ---
 layout: post
 title: A command line tool to create swift playground
-categories: [General]
-tags: [General]
-fullview: true
+description: "A npm based command line tool that comes in handy"
+tags: swift playground
+date: 2016-01-24 12:12:13
 ---
+
+### playground
+A command line application to quickly create and launch a Xcode playground.
+
+### Installation
+~~~
+npm install -g swiftplayground
+
+<!--more-->[ ](#){: id="more"}
 
 [![NPM version][npm-image]][npm-url]
 ![build-status](https://travis-ci.org/freesuraj/playground.svg?branch=master)
@@ -13,13 +22,6 @@ fullview: true
 [![devDependency Status](https://david-dm.org/freesuraj/playground/dev-status.svg)](https://david-dm.org/freesuraj/playground#info=devDependencies)
 [![download  numbers](https://img.shields.io/npm/dt/swiftplayground.svg)](https://www.npmjs.com/package/swiftplayground)
 [![Twitter](https://img.shields.io/badge/twitter-@iosCook-blue.svg?style=flat)](http://twitter.com/iosCook)
-
-### playground
-A command line application to quickly create and launch a Xcode playground.
-
-### Installation
-~~~
-npm install -g swiftplayground
 
 ~~~
 ### Usage

@@ -1,0 +1,105 @@
+$sizeBorder: 1px;
+
+@mixin navbarShadow() {
+  -webkit-box-shadow: 0 8px 6px -6px $colorShadow;
+  -moz-box-shadow: 0 8px 6px -6px $colorShadow;
+  box-shadow: 0 8px 6px -6px $colorShadow;
+}
+
+body { background-color: $background; color: $textColorTertiary; }
+h1, h1>a, h2, h2>a, h3, h4, h5, h6 { color: $textColorEmphasis; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  small, .small { color: $textColorSecondary; }
+}
+small, .small { color: $textColorSecondary; }
+a { color: $textColorLink; }
+a:hover { color: $textColorLinkHover; }
+pre { border: $sizeBorder solid $colorDivider; }
+code { color: $textColorPrimary; background-color: $colorDivider; }
+article>hr { border-top: $sizeBorder solid $colorDivider; width: 25%; }
+.divider { border-bottom: $sizeBorder solid $colorDivider; }
+.fa-facebook { color: $brandColorFacebook; }
+.fa-get-pocket { color: $brandColorPocket; }
+.fa-github { color: $brandColorGithub; }
+.fa-google-plus { color: $brandColorGooglePlus; }
+.fa-hacker-news { color: $brandColorHackerNews; }
+.fa-linkedin { color: $brandColorLinkedIn; }
+.fa-twitter { color: $brandColorTwitter; }
+.fa-stack-overflow { color: $brandColorStackOverflow; }
+.fa-reddit-alien { color: $brandColorReddit; }
+.fa-rss { color: $brandColorRss; }
+.navbar { border-bottom: $sizeBorder solid $colorShadow; }
+.a-blk-hover { color: $textColorPrimary; background-color: $colorPrimaryHighlight; }
+.navbar-default {
+  background-color: $colorPrimary;
+  @include navbarShadow();
+  .navbar-brand,
+  .navbar-brand:hover,
+  .navbar-nav>li>a,
+  .navbar-nav>li>a:hover,
+  .navbar-toggle,
+  .navbar-toggle:hover {
+    color: $textColorPrimary;
+  }
+  .navbar-brand:hover,
+  .navbar-nav>.open>a,
+  .navbar-nav>.open>a:hover,
+  .navbar-nav>.open>a:focus,
+  .navbar-nav>li>a:hover,
+  .navbar-toggle:hover {
+    @extend .a-blk-hover;
+  }
+  .navbar-toggle { border-color: transparent; }
+  .navbar-collapse { border-color: transparent; }
+  .navbar-form { border: none; }
+}
+.dropdown-menu { background-color: $colorPrimary; }
+.dropdown-menu>a:hover { background-color: $colorPrimaryHighlight; }
+.dropdown-menu-flex>a, .dropdown-menu-flex>a:hover { color: $textColorPrimary; text-decoration: none; }
+.dropdown-menu>li>a { color: $textColorPrimary; }
+.dropdown-menu>li>a:hover { @extend .a-blk-hover; }
+.author>a:hover { @extend .a-blk-hover; }
+.form-control-material {
+  width: 100%;
+  padding-right: 42.5px;
+  border: none;
+  border-bottom: $sizeBorder solid $colorDivider;
+}
+.form-control-material:focus {
+  outline: none;
+  border-bottom: $sizeBorder solid $textColorPrimary;
+}
+#search-form { color: $textColorPrimary; }
+#search-input { background-color: transparent; }
+.btn-default-hl {
+  color: $textColorTertiary;
+  background-color: $colorPrimaryHighlight;
+  border-color: $colorDivider
+}
+.btn-default:hover, .open>.dropdown-toggle.btn-default {
+  @extend .btn-default-hl;
+}
+.btn-default,
+.btn-default:active,
+.btn-default:focus {
+  color: $textColorTertiary;
+  background-color: $colorPrimary;
+  border-color: $colorDivider
+}
+.btn-default .badge {
+  color: $textColorInverse;
+  background-color: $textColorPrimary;
+}
+.bs-callout { border: $sizeBorder solid $colorDivider; }
+.bs-callout-default { border-left-color: $calloutDefault; }
+.bs-callout-default h4 { color: $calloutDefault; }
+.bs-callout-primary { border-left-color: $calloutPrimary; }
+.bs-callout-primary h4 { color: $calloutPrimary; }
+.bs-callout-success { border-left-color: $calloutSuccess; }
+.bs-callout-success h4 { color: $calloutSuccess; }
+.bs-callout-danger { border-left-color: $calloutDanger; }
+.bs-callout-danger h4 { color: $calloutDanger; }
+.bs-callout-warning { border-left-color: $calloutWarning; }
+.bs-callout-warning h4 { color: $calloutWarning; }
+.bs-callout-info { border-left-color: $calloutInfo; }
+.bs-callout-info h4 { color: $calloutInfo; }
