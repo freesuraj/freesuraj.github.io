@@ -20,6 +20,6 @@ title: Tag Cloud
     {% assign size = '' %}
     {% assign type = 'btn-primary' %}
   {% endif %}
-<a class="btn {{ type }} {{ size }}" style="margin-bottom:12px;" href="/search/{{ tag[0] }}">{{ tag[0] }}</a>&nbsp;
+<a class="btn {{ type }} {{ size }}" style="margin-bottom:12px;" href="/search/?query={{ tag[0] }}">{{ tag[0] }}</a>&nbsp;
 {% endfor %}
 </div>
