@@ -12,7 +12,7 @@ Since a complex number is comprised of a real and imaginary component, two compl
 
 Complex number
 
-**Complex.swift"**
+**Complex.swift**
 {% highlight swift %}
 struct Complex<T: SignedNumberType> {
     let real: T
