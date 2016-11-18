@@ -13,7 +13,7 @@ description: Suraj Pathak CV
 
 ## Summary
 
-I'm an iOS engineer (5+ years) based in Singapore (for now). I love programming in general and hacking in particular. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub.
+I'm an iOS engineer (5+ years) based in Singapore (for now). I love programming in general and hacking in particular. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. Currently, I am working on relocating to Australia and am open to explore exciting opportunities in Sydney or Melbourne. Feel free to contact me via email for further information.
 
 ## Experience
 
@@ -112,8 +112,8 @@ Academic research with focus on emerging memory technologies like SSD and PCM
 
 **Nationality:** Nepalese
 
+* Australian PR 
 * Require Visa sponsorship for US (H1B), UK, Canada
-* Nominated for Australian PR 
 
 **Languages**
 
