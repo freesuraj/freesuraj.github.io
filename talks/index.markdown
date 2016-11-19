@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blogroll
+description: My blog and web bookmarks
+talks:
+  -
+    title: "Scripting in Swift"
+    date: "2016-08-22"
+    url: "https://www.youtube.com/embed/XjpB0BjUA4A"
+  -
+    title: "Write your own Web Framework in Swift"
+    date: "2016-07-28"
+    url: "https://www.youtube.com/embed/xbD7rm5opqw"
+---
+
+<h1>{{ page.title }}<br/><small>{{ page.description }}</small></h1>
+
+{% for post in page.talks %}
+<h1>{{ post.title }}</h1> 
+<h3>
+  <small>
+    <i class="fa fa-calendar"></i>&nbsp; {{ post.date }}
+  </small>
+</h3>
+<iframe width="560" height="315" src={{ post.url }} frameborder="0" allowfullscreen></iframe>   
+<div class="clearfix divider"></div>
+{% endfor %}
