@@ -378,8 +378,16 @@ class func write (path: String, content: String, encoding: String.Encoding = Str
 
 That's it for generating the script.
 
+..................
+
+### Where to go next?
+
+You can check out the complete code at github [PlistToEnum](https://github.com/freesuraj/PlistToEnum).
+
 The next part would be, to make sure plist file and `PlistConfig.swift` are always in sync. Ideally, we'd like to protect `PlistConfig.swift` as readonly for user. And for iOS Project, we could write a Pre-build script to check if there's any update on plist file, and if so, to update the `PlistConfig.swift` file.
+
 
 I might write my next post on that topic.
 
 Till then, good day!!
+
