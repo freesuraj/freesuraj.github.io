@@ -22,8 +22,11 @@ The best thing about it is, we can use `Plist` for storing other custom informat
 It's easy to edit and save information in a plist file, but let's talk about reading it from iOS app, because that's what we are more focused on. The ease of using plist file. Generally, we don't write to a plist file using `code`, but we must `read` from code.
 
 Let's see the logic of reading a plist file:
+
 #### Easy but not so safe approach
+
 A plist can be converted into a Dictionary. If you know the key of a dictionary, you can get the value of it.
+
 ```swift
 if let path = Bundle.main.path(forResource: "Debug", ofType: "plist"),
   let dict = NSDictionary(contentsOfFile: path) as? [String: Any] {
@@ -32,6 +35,7 @@ if let path = Bundle.main.path(forResource: "Debug", ofType: "plist"),
 ```
 
 Doesn't it seem very easy? Yes, it does. But, why is it unsafe? Let's imagine you have a plist whose JSON equivalent looks like this
+
 ```
 {
   key1: {
@@ -45,6 +49,7 @@ Doesn't it seem very easy? Yes, it does. But, why is it unsafe? Let's imagine yo
 ```
 
 You'd need to know before hand, where your final value is. In this case `key1 -> key11 -> key111 -> keyFinal`. You need to check for validity and type guarantee at every key. Let's attempt to write, how we could read the final value `result`
+
 ```swift
 // Assuming we already have dict from previous step
 if let dict1 = dict["key1"] as? [String: Any],
@@ -58,12 +63,15 @@ if let dict1 = dict["key1"] as? [String: Any],
 Looks like the so-called easy step is not so easy after all. There must be a better way. There must be a safer way. Let's have another look.
 
 #### Alternative approach
+
 If we look carefully in the above code, the problem lies, because we need to keep digging for all intermediate `key`. We could probably write a generalized function that takes in all the keys, and it keeps going in to find the final value.
+
 ```swift
 func valueFor(keys: String..., inDictionary dict: [String: Any]) -> Any? {
 
 }
 ```
+
 That helps! Can we do better? Writing key names one by one is too prone to mistakes. What if you have a typo.
 
 What about, we generate the all possible keys combination out of plist, and read the key.
@@ -73,6 +81,7 @@ An interesting approach would be to generate a `enum` whose `case` are the `key`
 Since we are talking about iOS here, why not try scripting in `swift`. Swift is incredibly efficient for minimal tasks like this. There are several articles and talks about scripting in swift. You can checkout one of my talks [here](https://freesuraj.github.io/talks).
 
 ### Scripting in swift
+
 Let's start the fun part now. To begin, create a new Xcode project (Commandline). You should see a `main.swift` with a default `Hello, World!` line. Go ahead try to build and run `Cmd+B` and `Cmd+R`. If it's running fine, we can go about doing the real deal.
 
 The whole part can be divided into four main parts:
@@ -84,6 +93,7 @@ The whole part can be divided into four main parts:
 A plist is like an XML (and that's why a JSON like) file. It could be a dictionary or an array. So, before reading each items in plist, we should check whether it's an array or dictionary type.
 
 Let's define a class named `PListEnum`. It is going to be the heart and soul of converting plist to swift enum.
+
 ```swift
 class PlistEnum {
     let plistOutput: Any
@@ -93,7 +103,9 @@ class PlistEnum {
     }
 }
 ```
+
 You provide the fileUrl of plist file, we have a helper method on class `File` that reads plist file.
+
 ```swift
 class File {
   class func readPlist(url: URL) -> Any {
@@ -115,12 +127,15 @@ For an array, the only way to access all items is to know their index (`Int` typ
 So we have two possible `key` types if want to generalize both array and dictionary. `String` and `Int`.
 Let's define a protocol named `Keypathable` and make `String` and `Int` conform to it.
 
+
 ```swift
 protocol Keypathable {}
 extension Int: Keypathable {}
 extension String: Keypathable {}
 ```
+
 Now we're going to loop through each item of the dictionary and array in plist, as we loop through we save the combination of keys in an array. To hold the combination of keys that produces a value, we define a `struct` called `PlistKey`
+
 ```swift
 struct PlistKey: CustomStringConvertible {
         let keys: [Keypathable]
@@ -145,9 +160,11 @@ struct PlistKey: CustomStringConvertible {
 
     }
 ```
+
 We also define a couple of helper methods that we would find helpful later.
 
 Let's write a method that loops through dictionary and array.
+
 ```swift
 func run() {
         var keys: [PlistKey] = []
@@ -184,12 +201,14 @@ func run() {
         }
 }
 ```
+
 We've two methods defined inside `run`. `checkDict` and `checkArray` are very similar, the only difference is one has `String` key path type and the other has `Int` key path type.
 
 Once this finishes, the variable `keys` contains combination of all possible key paths that result in a meaningful value. All we are left with now, is to write a `.swift` file with `enum cases`
 
 The final config file we'd like to generate would look something like this:
 Let's call it `PlistConfig.swift`
+
 ```swift
 
 import Foundation
@@ -264,6 +283,7 @@ class PlistConfig {
 The part commented between two `//*************** ` indicates the part that needs to be updated from our script. Other than that, `PlistConfig.swift` is pretty ready to be used.
 
 The implementation part of the final part is a little bit long, so please bear with me.
+
 ```swift
 let template: String = "\n" +
     "import Foundation\n" +
@@ -333,6 +353,7 @@ let template: String = "\n" +
 
 This defines the template. We'd replace a few parameters inside it, and write this `template` string into a file named `PlistConfig.swift`.
 The final part is rather straight forward:
+
 ```swift
 var cases: [String] = []
         var caseResult: [String] = []
@@ -348,11 +369,13 @@ var cases: [String] = []
 ```
 
 Like the previously defined `read` method, we have a `write method` on `File` class.
+
 ```swift
 class func write (path: String, content: String, encoding: String.Encoding = String.Encoding.utf8) -> Bool {
     return ((try? content.write(toFile: path, atomically: true, encoding: encoding)) != nil) ?true :false
 }
 ```
+
 That's it for generating the script.
 
 The next part would be, to make sure plist file and `PlistConfig.swift` are always in sync. Ideally, we'd like to protect `PlistConfig.swift` as readonly for user. And for iOS Project, we could write a Pre-build script to check if there's any update on plist file, and if so, to update the `PlistConfig.swift` file.
