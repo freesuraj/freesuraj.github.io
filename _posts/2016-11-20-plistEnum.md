@@ -36,7 +36,7 @@ if let path = Bundle.main.path(forResource: "Debug", ofType: "plist"),
 
 Doesn't it seem very easy? Yes, it does. But, why is it unsafe? Let's imagine you have a plist whose JSON equivalent looks like this
 
-```
+```json
 {
   key1: {
     key11: {
