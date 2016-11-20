@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Plist for the win"
+title:  "A case for Plist and scripting in Swift"
 date:   2016-11-20 19:54:00
 description: "Why we should use Plist and how scripting in swift helps make life easy"
 tags: ios swift script plist swift-script
@@ -9,6 +9,8 @@ tags: ios swift script plist swift-script
 <div class="cap"></div>
 Property List is a convenient and flexible format for saving data. It was originally defined by apple, to use in iOS devices and later extended to various apps. Plist internally is actually an XML file and can easily be converted to JSON file format as well.
 Xcode provides a nice visual tool to edit and view contents of a `.plist` file.
+
+<!--more-->[ ](#){: id="more"}
 
 <a href="/assets/img/infoPlist.png"><img src="/assets/img/infoPlist.png" class="img-responsive center-block img-thumbnail" width="400" height="200" /></a>
 <figcaption>Typical Info.plist file</figcaption>
