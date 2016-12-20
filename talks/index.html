@@ -6,10 +6,12 @@ talks:
   -
     title: "Scripting in Swift"
     date: "2016-08-22"
+    summary: "Swift has gained significant community growth because of many features. What could really take it to next level is how easy it's to script in Swift. I present my case with some interesting examples."
     url: "https://www.youtube.com/embed/XjpB0BjUA4A"
   -
     title: "Write your own Web Framework in Swift"
     date: "2016-07-28"
+    summary: "Sure, there're viper, perfect, kitura and few others. But what if you wanted to write a web framework like them from a scratch? Without depending on anything else, but System Language: aka C. I personally love this project."
     url: "https://www.youtube.com/embed/xbD7rm5opqw"
 ---
 
@@ -22,6 +24,13 @@ talks:
     <i class="fa fa-calendar"></i>&nbsp; {{ post.date }}
   </small>
 </h3>
+
+</h3>
+<article class="drop-caps">
+  {{ post.summary }}
+</article>
+</h3>
+
 <iframe width="560" height="315" src={{ post.url }} frameborder="0" allowfullscreen></iframe>   
 <div class="clearfix divider"></div>
 {% endfor %}
