@@ -8,18 +8,20 @@ description: Suraj Pathak CV
 <p class="text-center">
     <a href="mailto:freesuraj@gmail.com">freesuraj@gmail.com</a>
     -
+    <a href="tel:+61416694124">+61 0416694124</a>
+    -
     <a href="https://freesuraj.github.io">https://freesuraj.github.io</a>
 </p>
 
 ## Summary
 
-I'm an iOS engineer (5+ years) based in Singapore (for now). I love programming in general and hacking in particular. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. Currently, I am working on relocating to Australia and am open to explore exciting opportunities in Sydney or Melbourne. Feel free to contact me via email for further information.
+I'm an iOS engineer (5+ years) based in Sydney (for now). I love programming in general and hacking in particular. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. I am looking for opportunties in Sydney or Melbourne as senior iOS developer or as a mobile team lead. Feel free to contact me via email for further information.
 
 ## Experience
 
 <div class="row">
     <div class="col-xs-8 section-left">PropertyGuru</div>
-    <div class="col-xs-4 section-right">12/2015 - Present</div>
+    <div class="col-xs-4 section-right">12/2015 -2/2017</div>
 </div>
 
 *iOS Engineer*
