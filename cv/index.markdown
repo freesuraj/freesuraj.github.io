@@ -15,12 +15,34 @@ description: Suraj Pathak CV
 
 ## Summary
 
-I'm an iOS engineer (5+ years) based in Sydney (for now). I love programming in general and hacking in particular. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. I am looking for opportunties in Sydney or Melbourne as senior iOS developer or as a mobile team lead. Feel free to contact me via email for further information.
+A senior iOS engineer with 6 years of experience in objective-c and 3+ years of experience in swift programming language. I am currently based in Sydney. I am passionate about programming and making mundane jobs more exciting. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. I am looking for opportunties in Sydney or Melbourne as senior iOS developer or as a mobile team lead. I am also interested in working remotely for projects, specially if they are related to iOT or machine learning.
+
+## Tools and tricks:
+* iOS: Swift and Objective-C
+* IDE: Xcode, Vim, Sublime
+* Mobile database: sqlite, coredata, realm database
+* Test: XCTest, XCUITest
+* Scripting: Shell, Python
+* Automation: Fastlane, xcodebuild
+* CI Tools: Jenkins, Bamboo, Travis, Circle
 
 ## Experience
 
 <div class="row">
-    <div class="col-xs-8 section-left">PropertyGuru</div>
+    <div class="col-xs-8 section-left">Massive Interactive (Sydney)</div>
+    <div class="col-xs-4 section-right">2/2017 - Present</div>
+</div>
+
+*iOS Engineer*
+
+Develop a dynamic content netflix like movie/live TV browsing app for iPhone, iPad and apple TV.
+
+* iOS and tvOS app development in Swift and Objective-C
+* XCTest, CI with Bamboo
+* Automation with Fastlane
+
+<div class="row">
+    <div class="col-xs-8 section-left">PropertyGuru (Singapore)</div>
     <div class="col-xs-4 section-right">12/2015 -2/2017</div>
 </div>
 
@@ -33,7 +55,7 @@ Develop and ship iOS applications for property search (consumer) and management 
 * Continuous integration with Jenkins
 
 <div class="row">
-    <div class="col-xs-8 section-left">Run Social</div>
+    <div class="col-xs-8 section-left">Run Social (Singapore)</div>
     <div class="col-xs-4 section-right">09/2014 - 12/2015</div>
 </div>
 
@@ -44,7 +66,7 @@ RunSocial’s mission is to help make fitness more fun. For people who love to r
 In addition to implementating new features, I was involved in two particularly interesting features: deeveloping VOIP service, live-chat for players.
 
 <div class="row">
-    <div class="col-xs-8 section-left">Freelance Hacker</div>
+    <div class="col-xs-8 section-left">Freelance Hacker (Singapore) </div>
     <div class="col-xs-4 section-right">02/2014 - 09/2014</div>
 </div>
 
@@ -53,7 +75,7 @@ In addition to implementating new features, I was involved in two particularly i
 I served several small to medium sized companies as a freelancer full stack developer developing products ranging from mobile payment, e-Commerce to IOT( Internet of things) and smart home.
 
 <div class="row">
-    <div class="col-xs-8 section-left">Web Spiders</div>
+    <div class="col-xs-8 section-left">Web Spiders (Singapore)</div>
     <div class="col-xs-4 section-right">02/2013 - 02/2014</div>
 </div>
 
@@ -69,8 +91,8 @@ I served several small to medium sized companies as a freelancer full stack deve
 * Keep up to date on the latest industry trends in the mobile technologies
 
 <div class="row">
-    <div class="col-xs-8 section-left">Web Spiders</div>
-    <div class="col-xs-4 section-right">02/2013 - 02/2014</div>
+    <div class="col-xs-8 section-left">2359 Media Pte Ltd (Singapore)</div>
+    <div class="col-xs-4 section-right">11/2011 - 02/2013</div>
 </div>
 
 *Mobile Developer*
@@ -124,22 +146,34 @@ Academic research with focus on emerging memory technologies like SSD and PCM
 * Nepali (Native)
 * Hindi (Fluent)
 
-## Portfolio
+## Selected works
 
 **SPPatternLock – iOS Component (open source)**
 
+* Language: Swift 3
+* Pattern Lock for iOS, watchOS and tvOS
+* Frameworks used: CoreAnimation, CoreGraphics
+* Support: Carthage, Cocoapods
 * <https://github.com/freesuraj/SPPatternLock>
 
 **SPAnalogClock – iOS Component (open source)**
 
+* Language: Objective-C
+* Dynamic analog clock similar to the native iPhone one
+* Frameworks: CoreAnimation, CoreGraphics
+* Support: Cocoapods
 * <https://github.com/freesuraj/SPAnalogClock>
 
-**SPAnalogClock – iOS Component (open source)**
+**SPTinderView – Tinder Clone**
 
-* <https://github.com/freesuraj/SwiftTemplate>
+* Language: Swift 3
+* Frameworks used: CoreAnimation, CoreGraphics, Custom Gestures
+* Support: Carthage, Cocoapods
+* <https://github.com/freesuraj/SPTinderView>
 
 **TLDR – iOS application (open source)**
 
+* A manual for commands for developers
 * <https://github.com/freesuraj/TLDR>
 
 **PropertyGuru iOS applications**
@@ -160,10 +194,11 @@ Academic research with focus on emerging memory technologies like SSD and PCM
 
 Other works can be found on my website and Github
 
-* <https://freesuraj.github.io>
-* <https://github.com/freesuraj>
+* Projects that I maintain: <https://freesuraj.github.io/projects>
+* Talks that I have given out: <https://freesuraj.github.io/talks>
+* Github profile: <https://github.com/freesuraj>
 
-## Publications
+## Academic Publications
 
 <div class="row">
     <div class="col-xs-8 section-left">Power and endurance aware Flash-PCM memory system</div>
