@@ -15,7 +15,7 @@ description: Suraj Pathak CV
 
 ## Summary
 
-A senior iOS engineer with 6 years of experience in objective-c and 3+ years of experience in swift programming language. I am currently based in Sydney. I am passionate about programming and making mundane jobs more exciting. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. I am looking for opportunties in Sydney or Melbourne as senior iOS developer or as a mobile team lead. I am also interested in working remotely for projects, specially if they are related to iOT or machine learning.
+A senior iOS engineer with 7 years of experience in objective-c and 4+ years of experience in swift programming language. I am currently based in Sydney. I am passionate about programming and making mundane jobs more exciting. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. I am looking for opportunties in Sydney or Melbourne as senior iOS developer or as a mobile team lead. I am also interested in working remotely for projects, specially if they are related to iOT or machine learning.
 
 ## Tools and tricks:
 * iOS: Swift and Objective-C
@@ -29,8 +29,22 @@ A senior iOS engineer with 6 years of experience in objective-c and 3+ years of 
 ## Experience
 
 <div class="row">
+    <div class="col-xs-8 section-left">Kogan.com (Melbourne)</div>
+    <div class="col-xs-4 section-right">9/2017 - Present</div>
+</div>
+
+*iOS Team Lead*
+
+Develop and Improve the Kogan.com iOS app.
+
+* Rebuilt the new Kogan iOS app from scratch using swift
+* Continuously propose and add new features by monitoring data from Google Analytics
+* Improved the App store rating from 2.0 to 4.7
+* Work on Django framework to build APIs native for iOS
+
+<div class="row">
     <div class="col-xs-8 section-left">Massive Interactive (Sydney)</div>
-    <div class="col-xs-4 section-right">2/2017 - Present</div>
+    <div class="col-xs-4 section-right">2/2017 - 9/2017</div>
 </div>
 
 *iOS Engineer*
