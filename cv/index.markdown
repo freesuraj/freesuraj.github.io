@@ -28,7 +28,6 @@ A senior iOS engineer with 7 years of experience in objective-c and 4+ years of 
 
 ## Experience
 
-
 <div class="row">
     <div class="col-xs-8 section-left">Kogan.com (Melbourne)</div>
     <div class="col-xs-4 section-right">9/2017 - Present</div>
