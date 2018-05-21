@@ -29,7 +29,7 @@ A senior iOS engineer with 7 years of experience in objective-c and 4+ years of 
 ## Experience
 
 <div class="row">
-    <div class="col-xs-8 section-left">Kogan.com (Melbourne)</div>
+    <div class="col-xs-8 section-left">Kogan Australia (Melbourne)</div>
     <div class="col-xs-4 section-right">9/2017 - Present</div>
 </div>
 
@@ -37,6 +37,7 @@ A senior iOS engineer with 7 years of experience in objective-c and 4+ years of 
 
 Develop and Improve the Kogan.com iOS app.
 
+* Largest eCommerce platform in Australia
 * Rebuilt the new Kogan iOS app from scratch using swift
 * Continuously propose and add new features by monitoring data from Google Analytics
 * Improved the App store rating from 2.0 to 4.7
