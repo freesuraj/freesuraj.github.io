@@ -24,7 +24,7 @@ A senior iOS engineer with 8 years of experience in objective-c and 4+ years of 
 * Test: XCTest, XCUITest
 * Scripting: Shell, Python
 * Automation: Fastlane, xcodebuild
-* CI Tools: Jenkins, Bamboo, Travis, Circle
+* CI Tools: Jenkins, Travis, Circle
 
 ## Experience
 
