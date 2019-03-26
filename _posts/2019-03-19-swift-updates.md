@@ -6,6 +6,7 @@ description: "Tips and tools for swift that may not be too popular"
 tags: ios swift tips
 ---
 
+<div class="cap"></div>
 It's been a while I've updated my posts. Here are some new tips that makes coding with swift cool.
 
 ### @autoclosure
@@ -31,6 +32,8 @@ evaluate([], "blank") // blank
 {% endhighlight %}
 
 ### Difference between `@escaping` and `nonescaping`
+
+<!--more-->[ ](#){: id="more"}
 
 A `nonescaping` closure gets executed with the function's body and returns before the function returns.
 
