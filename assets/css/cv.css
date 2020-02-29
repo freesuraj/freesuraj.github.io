@@ -34,6 +34,10 @@ hr {
 .section-right {
     text-align: right;
 }
+.column {
+    float: left;
+    width: 50%;
+}
 @media print {
     body {
         line-height: 150% !important;

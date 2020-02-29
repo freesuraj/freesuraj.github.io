@@ -3,29 +3,37 @@ layout: cv
 title: Suraj Pathak
 description: Suraj Pathak CV
 ---
+
 # Suraj Pathak
 
-<p class="text-center">
-    <a href="mailto:freesuraj@gmail.com">freesuraj@gmail.com</a>
-    -
-    <a href="tel:+61416694124">+61 0416694124</a>
-    -
-    <a href="https://freesuraj.github.io">https://freesuraj.github.io</a>
-</p>
+_Software Engineer_
+<div class="row">
+    <div class="col-xs-8 section-left"><a href="mailto:freesuraj@gmail.com">freesuraj@gmail.com</a></div>
+    <div class="col-xs-4 section-right"><a href="tel:+61416694124">+61 0416694124</a></div>
+</div>
 
 ## Summary
 
-A senior mobile apps engineer with 8 years of experience in objective-c, 4+ years of experience in swift programming language and 2 years of experience in Android. I am currently based in Melbourne, Australia. I am passionate about programming and making mundane jobs more exciting. I believe in working smart and creating a scalable, reusable modules. I have open sourced several projects on GitHub. 
-
-## Tools and tricks:
-* iOS: Swift and Objective-C
-* Android: Java and Kotlin
-* IDE: Xcode, Vim, Sublime, Android Studio
-* Mobile database: sqlite, coredata, realm database
-* Test: XCTest, XCUITest
-* Scripting: Shell, Python
-* Automation: Fastlane, xcodebuild
-* CI Tools: Jenkins, Travis, Circle
+<div class="row">
+    <div class="column">
+    <ul>
+    <li>Over 7 years of professional working experience</li>
+    <li>iOS: Swift and Objective-C (Expert)</li>
+    <li>Android: Java and Kotlin (Good)</li>
+    <li>IDE: Xcode, VS Code, Sublime, Android Studio</li>
+    <li>CI/CD Tools: CircleCI, Fastlane, xcodebuild, Travis, Jenkins</li>
+    </ul>
+    </div>
+    <div class="column">
+    <ul>
+    <li>Agile, Scrum</li>
+    <li>Passionate about good quality coding with Unit Testing</li>
+    <li>Familiar with OOP, POP, MVC, MVVM, SOLID patterns</li>
+    <li>Unit Test: XCTest, XCUITest</li>
+    <li>Basic experience with Bash scripting, Python and C</li>
+    </ul>
+    </div>
+</div>
 
 ## Experience
 
@@ -34,16 +42,19 @@ A senior mobile apps engineer with 8 years of experience in objective-c, 4+ year
     <div class="col-xs-4 section-right">9/2017 - Present</div>
 </div>
 
-*iOS and Android Engineer*
+*iOS Engineer*
 
-Develop and Improve the Kogan.com iOS app.
+Develop and Improve the Kogan.com ecommerce iOS app.
 
-* Largest eCommerce platform in Australia
-* Rebuilt the new Kogan iOS app from scratch using swift
+* Work with UI designer to create app screens and animation for smooth UX
+* Built the Kogan iOS app from scratch using swift 5.0
+* Use *FCM* to deliver push notifications
+* Setup the CI/CD pipeline with Fastlane and CircleCI for Unit Tests and deploying to Testflight
 * Maintain and enhance the existing Android app
+* Improved the App store rating from 2.0 to 4.8
+* Work on Python/Django framework to build APIs native for mobile
 * Continuously propose and add new features by monitoring data from Google Analytics
-* Improved the App store rating from 2.0 to 4.7
-* Work on Django framework to build APIs native for iOS
+
 
 <div class="row">
     <div class="col-xs-8 section-left">Massive Interactive (Sydney)</div>
@@ -68,8 +79,10 @@ Develop a dynamic content netflix like movie/live TV browsing app for iPhone, iP
 Develop and ship iOS applications for property search (consumer) and management (agent) for South East Asian market: 7 apps in 4 countries, 3 languages
 
 * iOS development in Swift and Objective-C
+* Maintain and add support for new features
 * Unit testing with XCUnitTest, UI automation XCUITest
 * Continuous integration with Jenkins
+* Decoupling project into multiple independent Framework and Open Sourcing Framework
 
 <div class="row">
     <div class="col-xs-8 section-left">Run Social (Singapore)</div>
@@ -129,7 +142,7 @@ elegant functional solutions
 
 *Research Staff*
 
-Academic research with focus on emerging memory technologies like SSD and PCM
+Academic research with focus on ways to improve CRUD efficiency on traditional relationship database to take full advantage of new emerging memory technologies like Solid State Disk(SSD) and Phase Change Memory(PCM).
 
 * 3 publication at top academic conferences
 
@@ -149,11 +162,22 @@ Academic research with focus on emerging memory technologies like SSD and PCM
 
 *Bachelor's Degree (Honours), Computer Engineering*
 
+## Meetup Presentation
+
+* Scripting in Swift <https://youtu.be/XjpB0BjUA4A>
+* Write your own web framework in Swift <https://youtu.be/xbD7rm5opqw>
+
+## Social Links
+
+* LinkedIn <https://www.linkedin.com/in/freesuraj>
+* Twitter <https://www.twitter.com/iOSCook>
+* Website <https://freesuraj.github.io>
+
 ## Personal Details
 
 **Nationality:** Nepalese
 
-* Australian PR 
+* Australian Permanent Resident
 * Require Visa sponsorship for US (H1B), UK, Canada
 
 **Languages**
@@ -164,6 +188,12 @@ Academic research with focus on emerging memory technologies like SSD and PCM
 * Hindi (Fluent)
 
 ## Selected works
+
+**Xcode MVVM template generator for XCode**
+
+* Language: Swift
+* Written for Alcatraz (xcode plugin manager)
+* <https://github.com/freesuraj/SwiftTemplate>
 
 **SPPatternLock – iOS Component (open source)**
 
@@ -250,3 +280,8 @@ WAFTL has been extensively evaluated under various enterprise workloads. Benchma
 <http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5599244>
 
 Random writes significantly limit the application of flash-based Solid State Drive (SSD) in enterprise environment due to its poor latency, negative impact on SSD lifetime and high garbage collection overhead. To release above limitations, we propose a locality-aware cooperative buffer scheme referred to as FlashCoop (Flash Cooperation), which leverages free memory of neighboring storage server to buffer writes over high speed network. Both temporal and sequential localities of access pattern are exploited in the design of cooperative buffer management. Leveraging the filtering effect of the cooperative buffer, FlashCoop can efficiently shape the I/O request stream and improve the sequentiality of the write accesses passed to the SSD. FlashCoop has been extensively evaluated under various enterprise workloads. Our benchmark results conclusively demonstrate that FlashCoop can achieve 52.3% performance improvement and 56.5% garbage collection overhead reduction compared to the system without FlashCoop.
+
+
+## References
+
+_Available on Request_
