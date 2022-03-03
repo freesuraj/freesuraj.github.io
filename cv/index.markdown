@@ -17,8 +17,8 @@ _Software Engineer_
 <div class="row">
     <div class="column">
     <ul>
-    <li>Over 7 years of professional working experience</li>
-    <li>iOS: Swift and Objective-C (Expert)</li>
+    <li>Over 9 years of professional working experience</li>
+    <li>iOS: Swift and Objective-C (Expert), GraphQL</li>
     <li>Android: Java and Kotlin (Good)</li>
     <li>IDE: Xcode, VS Code, Sublime, Android Studio</li>
     <li>CI/CD Tools: CircleCI, Fastlane, xcodebuild, Travis, Jenkins</li>
@@ -38,11 +38,25 @@ _Software Engineer_
 ## Experience
 
 <div class="row">
-    <div class="col-xs-8 section-left">Kogan.com (Melbourne)</div>
-    <div class="col-xs-4 section-right">9/2017 - Present</div>
+    <div class="col-xs-8 section-left">Catch.com.au (Melbourne)</div>
+    <div class="col-xs-4 section-right">2/2020 - Present</div>
 </div>
 
-*iOS Engineer*
+*Snr iOS Engineer*
+
+Develop and Improve the Catch.com.au ecommerce iOS app.
+
+* Work closely with stakeholders, designers and other engineers to
+architect new and improved features
+* Suggest A/B experiments to test and analyse different solution strategies
+* Help improve the app response time and user-friendliness
+
+<div class="row">
+    <div class="col-xs-8 section-left">Kogan.com (Melbourne)</div>
+    <div class="col-xs-4 section-right">9/2017 - 2/2020</div>
+</div>
+
+*Snr iOS Engineer*
 
 Develop and Improve the Kogan.com ecommerce iOS app.
 
