@@ -270,8 +270,6 @@ Other works can be found on my website and Github
 
 <http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=6008592>
 
-Two major performance issues of Flash NAND are the write latency for random writes, and the lifetime of NAND chips. Several methods, mainly focusing on the Flash Translation Layer (FTL) or the Flash Buffer Management have been proposed to address these problems. In this paper, we propose an idea of reducing write traffic to Flash by the following steps: First we avoid repeated writes to Flash SSD by finding the redundant writes using a cryptographic HASH cipher. We design a set of acceleration techniques to reduce the latency overhead of this extra computational cost. Then we propose a PCM-based buffer extender for Flash SSD where we write the frequent updates to hot pages of Flash into PCM layer, which allows in-page update. Finally, while merging the PCM updated data to the Flash page, we use a special merging technique to change the flushes into sequential flushes, as sequential writes on Flash are almost thrice as fast as random writes. We maintain the redundant write finder mechanism in PCM. We test our design using a trace-driven simulator. The results show that compared to the traditional design technique, lifetime of Flash SSD can be more than quadrupled, while consuming 20% less power to do so with some improvement in write performance as well.
-
 <div class="row">
     <div class="col-xs-8 section-left">WAFTL: A Workload Adaptive Flash Translation Layer with Data Partition</div>
     <div class="col-xs-4 section-right">05/2011</div>
@@ -281,9 +279,6 @@ Two major performance issues of Flash NAND are the write latency for random writ
 
 <http://www.storageconference.org/2011/Papers/Research/6.Wei.pdf>
 
-Current FTL schemes have inevitable limitations in terms of memory requirement, performance, garbage collection overhead, and scalability. To overcome these limitations, we propose a workload adaptive flash translation layer referred to as WAFTL. WAFTL explores either page-level or block-level address mapping for normal data block based on access patterns. Page Mapping Block (PMB) is used to store random data and handle large number of partial updates. Block Mapping Block (BMB) is utilized to store sequential data and lower overall mapping table. PMB or BMB is allocated on demand and the number of PMB or BMB eventually depends on workload. An efficient address mapping is designed to reduce overall mapping table and quickly conduct address translation. WAFTL explores a small part of flash space as Buffer Zone to log writes sequentially and migrate data into BMB or PMB based on threshold. Static and dynamic threshold setting are proposed to balance performance and mapping table size.
-WAFTL has been extensively evaluated under various enterprise workloads. Benchmark results conclusively demonstrate that proposed WAFTL is workload adaptive and achieves up to 80% performance improvement, 83% garbage collection overhead reduction and 50% mapping table reduction compared to existing FTL schemes.
-
 <div class="row">
     <div class="col-xs-8 section-left">FlashCoop: A Locality-Aware Cooperative Buffer Management for SSD-based Storage Cluster</div>
     <div class="col-xs-4 section-right">09/2010</div>
@@ -292,8 +287,6 @@ WAFTL has been extensively evaluated under various enterprise workloads. Benchma
 *39th International Conference on Parallel ProcessingSeptember · Authors: Suraj Pathak, Qingsong Wei, Bozhang Go, YC Tay*
 
 <http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5599244>
-
-Random writes significantly limit the application of flash-based Solid State Drive (SSD) in enterprise environment due to its poor latency, negative impact on SSD lifetime and high garbage collection overhead. To release above limitations, we propose a locality-aware cooperative buffer scheme referred to as FlashCoop (Flash Cooperation), which leverages free memory of neighboring storage server to buffer writes over high speed network. Both temporal and sequential localities of access pattern are exploited in the design of cooperative buffer management. Leveraging the filtering effect of the cooperative buffer, FlashCoop can efficiently shape the I/O request stream and improve the sequentiality of the write accesses passed to the SSD. FlashCoop has been extensively evaluated under various enterprise workloads. Our benchmark results conclusively demonstrate that FlashCoop can achieve 52.3% performance improvement and 56.5% garbage collection overhead reduction compared to the system without FlashCoop.
 
 
 ## References
