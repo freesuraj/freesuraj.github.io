@@ -12,14 +12,16 @@ _Software Engineer_
     <div class="col-xs-4 section-right"><a href="tel:+61416694124">+61 0416694124</a></div>
 </div>
 
+<br/>
+Passionate and results-driven iOS Software Engineer with over 10 of experience in designing, developing, and maintaining consumer-facing iOS applications. Skilled in creating robust, secure, and user-friendly mobile experiences. Adept at collaborating cross-functionally, adhering to engineering standards, and continuously enhancing application performance. Strong commitment to staying updated with iOS development trends and best practices. Experience with leading a team of mobile engineers.
+
 ## Summary
 
 <div class="row">
     <div class="column">
     <ul>
-    <li>Over 9 years of professional working experience</li>
-    <li>iOS: Swift and Objective-C (Expert), GraphQL</li>
-    <li>Android: Java and Kotlin (Good)</li>
+    <li>iOS: Swift, SwiftUI, Objective-C, GraphQL</li>
+    <li>Android: Java and Kotlin</li>
     <li>IDE: Xcode, VS Code, Sublime, Android Studio</li>
     <li>CI/CD Tools: CircleCI, Fastlane, xcodebuild, Travis, Jenkins</li>
     </ul>
@@ -27,7 +29,6 @@ _Software Engineer_
     <div class="column">
     <ul>
     <li>Agile, Scrum</li>
-    <li>Passionate about good quality coding with Unit Testing</li>
     <li>Familiar with OOP, POP, MVC, MVVM, SOLID patterns</li>
     <li>Unit Test: XCTest, XCUITest</li>
     <li>Basic experience with Bash scripting, Python and C</li>
@@ -39,10 +40,10 @@ _Software Engineer_
 
 <div class="row">
     <div class="col-xs-8 section-left">Catch.com.au (Melbourne)</div>
-    <div class="col-xs-4 section-right">2/2020 - Present</div>
+    <div class="col-xs-4 section-right">4/2020 - Present</div>
 </div>
 
-*Snr iOS Engineer*
+*iOS Team Lead*
 
 Develop and Improve the Catch.com.au ecommerce iOS app.
 
@@ -116,7 +117,7 @@ In addition to implementating new features, I was involved in two particularly i
 
 *Freelance Hacker*
 
-I served several small to medium sized companies as a freelancer full stack developer developing products ranging from mobile payment, e-Commerce to IOT( Internet of things) and smart home.
+I served several small to medium sized companies as a freelancer full stack developer developing products ranging from mobile payment, e-Commerce to IOT(Internet of things) and smart home while pursuing a startup of my own.
 
 <div class="row">
     <div class="col-xs-8 section-left">Web Spiders (Singapore)</div>
@@ -189,10 +190,7 @@ Academic research with focus on ways to improve CRUD efficiency on traditional r
 
 ## Personal Details
 
-**Nationality:** Nepalese
-
-* Australian Permanent Resident
-* Require Visa sponsorship for US (H1B), UK, Canada
+**Nationality:** Australian
 
 **Languages**
 
