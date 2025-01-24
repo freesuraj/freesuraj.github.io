@@ -13,7 +13,11 @@ _Software Engineer_
 </div>
 
 <br/>
-Passionate and results-driven iOS Software Engineer with over 10 of experience in designing, developing, and maintaining consumer-facing iOS applications. Skilled in creating robust, secure, and user-friendly mobile experiences. Adept at collaborating cross-functionally, adhering to engineering standards, and continuously enhancing application performance. Strong commitment to staying updated with iOS development trends and best practices. Experience with leading a team of mobile engineers.
+Passionate and results-driven iOS Software Engineer with over 10 of experience in designing, developing, 
+and maintaining consumer-facing iOS applications. Skilled in creating robust, secure, and user-friendly 
+mobile experiences. Adept at collaborating cross-functionally, adhering to engineering standards, and 
+continuously enhancing application performance. Strong commitment to staying updated with iOS development 
+trends and best practices. Experience with leading a team of mobile engineers.
 
 ## Summary
 
