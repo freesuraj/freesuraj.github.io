@@ -13,11 +13,12 @@ _Software Engineer_
 </div>
 
 <br/>
-Passionate and results-driven iOS Software Engineer with over 10 of experience in designing, developing, 
-and maintaining consumer-facing iOS applications. Skilled in creating robust, secure, and user-friendly 
-mobile experiences. Adept at collaborating cross-functionally, adhering to engineering standards, and 
-continuously enhancing application performance. Strong commitment to staying updated with iOS development 
-trends and best practices. Experience with leading a team of mobile engineers.
+Results-driven iOS Team Lead and Senior iOS Engineer with over 10 years of experience in developing 
+and optimizing ecommerce mobile applications. Proven expertise in modernizing legacy codebases, 
+building scalable CI/CD pipelines, and delivering high-performance apps that drive user engagement 
+and revenue growth. Adept at collaborating with cross-functional teams to architect innovative solutions
+and leveraging data-driven insights to improve app performance. Passionate about adopting cutting-edge 
+technologies like SwiftUI and GraphQL to deliver exceptional user experiences.
 
 ## Summary
 
@@ -47,14 +48,18 @@ trends and best practices. Experience with leading a team of mobile engineers.
     <div class="col-xs-4 section-right">4/2020 - Present</div>
 </div>
 
-*iOS Team Lead*
+*iOS Engineer & Lead*
 
-Develop and Improve the Catch.com.au ecommerce iOS app.
+* Lead the development and enhancement of the Catch.com.au ecommerce iOS app, driving improvements in performance, user experience, and maintainability.
+* Spearheaded the migration from legacy Objective-C codebase to SwiftUI, reducing build times and modernizing the app’s architecture.
+* Designed and implemented a robust CI/CD pipeline using CircleCI and GitHub Actions, streamlining the release process and ensuring high-quality deployments.
+* Collaborated with cross-functional teams (stakeholders, designers, and engineers) to architect and deliver innovative features, improving app response time and user engagement.
+* Proposed and implemented A/B testing strategies to evaluate feature performance, leading to data-driven decision-making and enhanced user satisfaction.
+* Played a dual role as a hands-on developer and team leader, contributing to technical solutions while participating in leadership meetings to align on strategic goals.
 
-* Work closely with stakeholders, designers and other engineers to
-architect new and improved features
-* Suggest A/B experiments to test and analyse different solution strategies
-* Help improve the app response time and user-friendliness
+**Key Highlight** 
+* Led the team in a full-scale app rebuild, eliminating legacy code and significantly reducing development time for new features.
+* Introduced SwiftUI to accelerate UI development and maintain a modern, maintainable codebase.
 
 <div class="row">
     <div class="col-xs-8 section-left">Kogan.com (Melbourne)</div>
@@ -63,16 +68,16 @@ architect new and improved features
 
 *Snr iOS Engineer*
 
-Develop and Improve the Kogan.com ecommerce iOS app.
-
-* Work with UI designer to create app screens and animation for smooth UX
-* Built the Kogan iOS app from scratch using swift 5.0
-* Use *FCM* to deliver push notifications
-* Setup the CI/CD pipeline with Fastlane and CircleCI for Unit Tests and deploying to Testflight
-* Maintain and enhance the existing Android app
+* Built the Kogan iOS app from scratch using swift 5.0 improving dev time and feature iterations significantly
 * Improved the App store rating from 2.0 to 4.8
-* Work on Python/Django framework to build APIs native for mobile
-* Continuously propose and add new features by monitoring data from Google Analytics
+* Setup the CI/CD pipeline with Fastlane and Circle CI for Unit Tests and deploying to TestFlight
+* Work on existing Android app and Python/Django framework to build APIs native for mobile
+* Continuously propose and add new features by monitoring data from Google Analytics to improve the revenue
+
+**Key Highlight**
+* Delivered the first version of the Kogan iOS app within 3 months as a solo developer, setting a strong foundation for future scalability.
+* Enhanced app revenue by introducing data-driven features and optimizing the user experience.
+
 
 
 <div class="row">
