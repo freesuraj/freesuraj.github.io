@@ -6,8 +6,6 @@ description: "How does end to end encryption work?"
 tags: encryption mobile 
 ---
 
-<div class="cap"></div>
-
 End-To-End Encryption
 
 > Can you elaborate more on the end-to-end encryption of messages? For example: when device-A sends "Good morning device-B" to device-B, how's that message encrypted, where does the encryption keys stored? Are there private and public keys? Then how does device-B decrypt that?
