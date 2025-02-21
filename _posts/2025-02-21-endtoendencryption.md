@@ -7,16 +7,13 @@ tags: encryption mobile
 ---
 
 <div class="cap"></div>
- 
 
 End-To-End Encryption
 
 > Can you elaborate more on the end-to-end encryption of messages? For example: when device-A sends "Good morning device-B" to device-B, how's that message encrypted, where does the encryption keys stored? Are there private and public keys? Then how does device-B decrypt that?
 
-
 End-to-end encryption (E2EE) ensures that only the sender and intended recipient can read the messages, even if the data is intercepted during transmission or stored on servers. Below is a detailed explanation of how E2EE works in the context of your example, where **Device-A** sends the message "Good morning Device-B" to **Device-B**.
 
----
 
 ## **1. Key Concepts of End-to-End Encryption**
 To understand how E2EE works, let's first review some key cryptographic concepts:
