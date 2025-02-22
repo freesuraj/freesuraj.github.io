@@ -117,18 +117,7 @@ layout: default
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script type="text/javascript">
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
-<script>
-  function renderMermaid(){
-      mermaid.init(undefined,document.querySelectorAll(".mermaid"));
-  }
-  $(function() {
-      $(document).on('previewUpdated', function() {        
-          renderMermaid();
-      });
-      renderMermaid();
-  });
-  </script>
