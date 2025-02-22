@@ -31,34 +31,34 @@ In E2EE systems like WhatsApp, **asymmetric encryption** is typically used to es
 
 ## **2. Workflow for Encrypting and Decrypting Messages**
 
-```mermaid
-sequenceDiagram
-    participant A as Device A
-    participant S as Server
-    participant B as Device B
+<pre class="mermaid">
+    sequenceDiagram
+        participant A as Device A
+        participant S as Server
+        participant B as Device B
 
-    Note over A,B: Key Exchange Phase
-    A->>+A: Generate key pair<br/>(Public Key A, Private Key A)
-    B->>+B: Generate key pair<br/>(Public Key B, Private Key B)
-    A->>S: Share Public Key A
-    B->>S: Share Public Key B
-    S->>A: Receive Public Key B
-    S->>B: Receive Public Key A
+        Note over A,B: Key Exchange Phase
+        A->>+A: Generate key pair<br/>(Public Key A, Private Key A)
+        B->>+B: Generate key pair<br/>(Public Key B, Private Key B)
+        A->>S: Share Public Key A
+        B->>S: Share Public Key B
+        S->>A: Receive Public Key B
+        S->>B: Receive Public Key A
 
-    Note over A,B: Message 1: "Good morning B"
-    A->>+A: Encrypt "Good morning B"<br/>using Public Key B
-    A->>S: Send encrypted message
-    S->>B: Forward encrypted message
-    B->>+B: Decrypt using Private Key B<br/>to read "Good morning B"
+        Note over A,B: Message 1: "Good morning B"
+        A->>+A: Encrypt "Good morning B"<br/>using Public Key B
+        A->>S: Send encrypted message
+        S->>B: Forward encrypted message
+        B->>+B: Decrypt using Private Key B<br/>to read "Good morning B"
 
-    Note over A,B: Message 2: "I'm fine, thank you, A"
-    B->>+B: Encrypt "I'm fine, thank you, A"<br/>using Public Key A
-    B->>S: Send encrypted message
-    S->>A: Forward encrypted message
-    A->>+A: Decrypt using Private Key A<br/>to read "I'm fine, thank you, A"
+        Note over A,B: Message 2: "I'm fine, thank you, A"
+        B->>+B: Encrypt "I'm fine, thank you, A"<br/>using Public Key A
+        B->>S: Send encrypted message
+        S->>A: Forward encrypted message
+        A->>+A: Decrypt using Private Key A<br/>to read "I'm fine, thank you, A"
 
-    Note over A,B: Server cannot read messages<br/>Only encrypted data passes through
-```
+        Note over A,B: Server cannot read messages<br/>Only encrypted data passes through
+</pre>
 
 ### **Step 1: Key Generation**
 Each device generates its own **key pair** (public and private keys):
