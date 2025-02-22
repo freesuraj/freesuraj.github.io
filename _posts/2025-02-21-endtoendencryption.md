@@ -33,31 +33,37 @@ In E2EE systems like WhatsApp, **asymmetric encryption** is typically used to es
 
 <pre class="mermaid">
     sequenceDiagram
-        participant A as Device A
-        participant S as Server
-        participant B as Device B
+        participant DeviceA
+        participant Server
+        participant DeviceB
 
-        Note over A,B: Key Exchange Phase
-        A->>+A: Generate key pair<br/>(Public Key A, Private Key A)
-        B->>+B: Generate key pair<br/>(Public Key B, Private Key B)
-        A->>S: Share Public Key A
-        B->>S: Share Public Key B
-        S->>A: Receive Public Key B
-        S->>B: Receive Public Key A
+        Note over DeviceA,DeviceB: Key Generation
+        DeviceA->>DeviceA: Generate Key Pair (PrivateKey_A, PublicKey_A)
+        DeviceB->>DeviceB: Generate Key Pair (PrivateKey_B, PublicKey_B)
 
-        Note over A,B: Message 1: "Good morning B"
-        A->>+A: Encrypt "Good morning B"<br/>using Public Key B
-        A->>S: Send encrypted message
-        S->>B: Forward encrypted message
-        B->>+B: Decrypt using Private Key B<br/>to read "Good morning B"
+        Note over DeviceA,DeviceB: Key Exchange via Server
+        DeviceA->>Server: Upload PublicKey_A
+        DeviceB->>Server: Upload PublicKey_B
+        Server-->>DeviceA: Share PublicKey_B
+        Server-->>DeviceB: Share PublicKey_A
 
-        Note over A,B: Message 2: "I'm fine, thank you, A"
-        B->>+B: Encrypt "I'm fine, thank you, A"<br/>using Public Key A
-        B->>S: Send encrypted message
-        S->>A: Forward encrypted message
-        A->>+A: Decrypt using Private Key A<br/>to read "I'm fine, thank you, A"
+        Note over DeviceA,DeviceB: Compute Shared Secret
+        DeviceA->>DeviceA: Compute SharedKey_AB using PrivateKey_A and PublicKey_B
+        DeviceB->>DeviceB: Compute SharedKey_BA using PrivateKey_B and PublicKey_A
 
-        Note over A,B: Server cannot read messages<br/>Only encrypted data passes through
+        Note over DeviceA,DeviceB: Message Encryption and Transmission
+        DeviceA->>DeviceA: Encrypt "Hello, B" using SharedKey_AB
+        DeviceA->>Server: Send Encrypted Message
+        Server-->>DeviceB: Forward Encrypted Message
+        DeviceB->>DeviceB: Decrypt Message using SharedKey_BA
+        DeviceB->>DeviceB: Read "Hello, B"
+
+        Note over DeviceA,DeviceB: Reply Encryption and Transmission
+        DeviceB->>DeviceB: Encrypt "Hi B, I'm fine thank you" using SharedKey_BA
+        DeviceB->>Server: Send Encrypted Reply
+        Server-->>DeviceA: Forward Encrypted Reply
+        DeviceA->>DeviceA: Decrypt Reply using SharedKey_AB
+        DeviceA->>DeviceA: Read "Hi B, I'm fine thank you"
 </pre>
 
 ### **Step 1: Key Generation**
