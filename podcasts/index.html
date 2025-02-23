@@ -1,0 +1,41 @@
+---
+layout: default
+title: Audio files
+description: Audio files for the podcast, all generated with notellm
+items:
+  - title: "Static vs Dynamic Framework"
+    date: "2025-02-20"
+    url: "/assets/audio/staticVsDynamic.wav"
+  - title: "Compiler, LLVM and Clan"
+    date: "2025-02-20"
+    url: "/assets/audio/compiler.wav"
+  - title: "ABI Stability"
+    date: "2025-02-20"
+    url: "/assets/audio/abiStability.wav"
+  - title: "iOS Concurrency, thread-safety, GCD"
+    date: "2025-02-20"
+    url: "/assets/audio/concurrency.wav"
+---
+
+<h1>{{ page.title }}<br/><small>{{ page.description }}</small></h1>
+
+{% for post in page.items %}
+<h2>
+    <audio controls>
+        <source src="{{ post.url }}" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+</h2> 
+<h3>
+  <small>
+    <i class="fa fa-calendar"></i>&nbsp; {{ post.date }}
+  </small>
+</h3>
+</h3>
+<article class="drop-caps">
+  {{ post.summary }}
+</article>
+</h3>
+
+<div class="clearfix divider"></div>
+{% endfor %}
