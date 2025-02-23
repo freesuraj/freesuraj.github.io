@@ -25,7 +25,7 @@ For example:
 - A **binary framework** specifically emphasizes the precompiled binary part, meaning the source code (e.g., Swift or Objective-C) has already been processed into machine code.
 
 ### Compilation Stages and Where the Binary Framework Fits
-The compilation process in Xcode (leveraging tools like `clang` under the hood) involves several stages. Here’s how it works and where the binary framework comes into play:
+The compilation process in Xcode (leveraging tools like `clang` under the hood) involves several stages. Here’s how it works and where the binary framework comes into play. To read more about compiler and how swift compiler works, please go to this [article](/2025/02/15/compiler)
 
 1. **Preprocessing**:
    - Source files (e.g., `.swift`, `.m`, `.c`) are processed to handle directives like `#include`, `#define`, or Swift’s `import`.

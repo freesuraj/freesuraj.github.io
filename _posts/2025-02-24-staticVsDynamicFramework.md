@@ -101,7 +101,7 @@ Performance differences between static and dynamic frameworks stem from their li
      - No indirection through dynamic linker tables.
   3. **Memory Usage**: Predictable memory footprint; no additional overhead for loading a separate module.
 - **Cons**:
-  1. **Build Time**: Slower incremental builds because the framework’s code must be recompiled and linked into the app binary every time.
+  1. **Build Time**: Slower incremental builds because the framework’s code must be recompiled and linked into the app binary every time. To read more about compiler and how swift compiler works, please go to this [article](/2025/02/15/compiler).
   2. **Binary Size**: Larger app binary, which could slightly increase initial load time from disk (though this is negligible with modern SSDs and caching).
   3. **No Code Sharing**: If used in multiple targets (e.g., app and extension), the code is duplicated, increasing memory usage at runtime.
 
