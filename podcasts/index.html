@@ -21,6 +21,10 @@ items:
 
 {% for post in page.items %}
 <h2>
+    {{ post.title }}
+    <br>
+    <br>
+    <br>
     <audio controls>
         <source src="{{ post.url }}" type="audio/wav">
         Your browser does not support the audio element.
@@ -30,11 +34,6 @@ items:
   <small>
     <i class="fa fa-calendar"></i>&nbsp; {{ post.date }}
   </small>
-</h3>
-</h3>
-<article class="drop-caps">
-  {{ post.summary }}
-</article>
 </h3>
 
 <div class="clearfix divider"></div>
