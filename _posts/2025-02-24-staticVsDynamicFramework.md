@@ -11,6 +11,13 @@ Static vs Binary Framework in Xcode
 
 Let’s dive into the key differences between **static frameworks** and **dynamic frameworks** in iOS, explore when to use each, and then tackle the curveball about performance trade-offs. This is particularly relevant when designing an SDK, like the Oracle Cloud Services SDK we’ve been discussing.
 
+To read a quick discussion about static vs dynamic in a podcast style, go here
+
+<audio controls>
+  <source src="/assets/audio/.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
 ---
 
 <!--more-->[ ](#){: id="more"}
