@@ -44,8 +44,20 @@ technologies like SwiftUI and GraphQL to deliver exceptional user experiences.
 ## Experience
 
 <div class="row">
+    <div class="col-xs-8 section-left">Australia and New Zealand Bank (ANZ)</div>
+    <div class="col-xs-4 section-right">3/2025 - Present</div>
+</div>
+
+*Senior mobile Engineer*
+
+* Providing strategic technical leadership to drive ANZ Bank’s transformation into the first fully digitalized banking platform in Australia and New Zealand.
+* Serving as the principal advocate for a unified customer-facing application by consolidating multiple existing ANZ banking apps into a single, comprehensive solution.
+* Contributing to the core iOS and mobile technology team by mentoring junior developers and ensuring delivery commitments are met within realistic timelines.
+
+
+<div class="row">
     <div class="col-xs-8 section-left">Catch.com.au (Melbourne)</div>
-    <div class="col-xs-4 section-right">4/2020 - Present</div>
+    <div class="col-xs-4 section-right">4/2020 - 3/2025</div>
 </div>
 
 *iOS Engineer & Lead*
