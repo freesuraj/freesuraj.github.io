@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { podcasts } from "../../data/site";
+---
+
+<BaseLayout title="Podcasts" description="Podcast-style audio posts generated from recent topics.">
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Podcasts</p>
+      <h1 class="page-title">Audio companions for recent topics</h1>
+      <p class="section-intro">
+        Short podcast-style audio files for a few recent technical topics.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cards">
+      {
+        podcasts.map((episode) => (
+          <article class="audio-card">
+            <p class="eyebrow">{episode.date}</p>
+            <h3>{episode.title}</h3>
+            <audio controls preload="none">
+              <source src={episode.file} type="audio/wav" />
+            </audio>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

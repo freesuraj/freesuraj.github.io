@@ -1,0 +1,168 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  experience,
+  focusAreas,
+  principles,
+  projects,
+  siteMeta,
+  socialLinks,
+  talks
+} from "../data/site";
+import { getExcerpt, getLegacyPostUrl, sortPosts } from "../lib/blog";
+
+const posts = sortPosts(await getCollection("blog"));
+const latestPosts = posts.slice(0, 3);
+const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+---
+
+<BaseLayout title={siteMeta.title}>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Portfolio and writing</p>
+      <h1>Shipping mobile products with a bias for clarity.</h1>
+      <p>
+        I’m Suraj Pathak, a senior mobile engineer focused on iOS architecture,
+        legacy modernization, delivery systems, and practical engineering
+        writing.
+      </p>
+      <div class="hero-stack">
+        {focusAreas.map((area) => <span class="pill">{area}</span>)}
+      </div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/blog/">Read the blog</a>
+        <a class="button button-secondary" href="/resume/">View resume</a>
+        <a class="button button-secondary" href={socialLinks[0].href}>GitHub</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <div>
+        <p class="eyebrow">Current focus</p>
+        <p class="muted">
+          Building reliable mobile systems, reducing complexity in legacy code,
+          and writing about the parts of software engineering that still matter
+          once the novelty wears off.
+        </p>
+      </div>
+
+      <div class="stat-line">
+        <div class="stat">
+          <span class="stat-value">10+</span>
+          <span class="muted">Years in mobile engineering</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{posts.length}</span>
+          <span class="muted">Published technical posts</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow">How I work</p>
+        <div class="section" style="margin-top: 0.8rem;">
+          {principles.map((principle) => <span class="pill">{principle}</span>)}
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects with a bias for utility</h2>
+      </div>
+      <a class="link-inline" href="/projects/">See all projects</a>
+    </div>
+    <div class="cards">
+      {
+        featuredProjects.map((project) => (
+          <article class="card">
+            <p class="eyebrow">{project.year}</p>
+            <h3>
+              <a href={project.href} target="_blank" rel="noreferrer">
+                {project.title}
+              </a>
+            </h3>
+            <p class="muted">{project.summary}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Latest writing</p>
+        <h2>Engineering notes and longer-form posts</h2>
+      </div>
+      <a class="link-inline" href="/blog/">Open blog</a>
+    </div>
+    <div class="cards">
+      {
+        latestPosts.map((post) => (
+          <article class="post-card">
+            <p class="eyebrow">{post.data.date.toLocaleDateString("en-AU")}</p>
+            <h2>
+              <a href={getLegacyPostUrl(post)}>{post.data.title}</a>
+            </h2>
+            <p class="muted">{getExcerpt(post)}</p>
+            <div class="link-row">
+              {(post.data.tags ?? []).slice(0, 3).map((tag) => <span class="pill">{tag}</span>)}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Experience</p>
+        <h2>Recent roles</h2>
+      </div>
+      <a class="link-inline" href="/resume/">Open resume</a>
+    </div>
+    <div class="timeline">
+      {
+        experience.map((item) => (
+          <article class="timeline-card">
+            <div class="meta">
+              <span>{item.role}</span>
+              <span>{item.company}</span>
+              <span>{item.period}</span>
+            </div>
+            <p>{item.summary}</p>
+            <ul>
+              {item.highlights.map((highlight) => <li>{highlight}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Speaking</p>
+        <h2>Talks and references</h2>
+      </div>
+      <a class="link-inline" href="/talks/">More talks</a>
+    </div>
+    <div class="grid-2">
+      {
+        talks.map((talk) => (
+          <article class="card">
+            <p class="eyebrow">{talk.date}</p>
+            <h3>{talk.title}</h3>
+            <p class="muted">{talk.summary}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

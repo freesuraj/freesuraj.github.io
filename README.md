@@ -1,18 +1,37 @@
-# Suraj's home page
+# Suraj's portfolio and blog
 
-This is a gitrepo to my personal [website](https://freesuraj.github.io). It uses Jekyll to run the website. 
+This repository now runs the personal site at <https://freesuraj.github.io> on Astro 6.
+
+## Stack
+
+- Astro 6
+- TypeScript (strict)
+- Astro content collections for blog posts
+- Static output with sitemap and RSS
 
 ## Running locally
 
 ```bash
-
-gem install bundler
-bundle install
-bundle exec jekyll serve
+npm install
+npm run dev
 ```
 
-After doing this the server will run at: http://127.0.0.1:4000
+The dev server runs at: <http://127.0.0.1:4321>
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Structure
+
+- `src/pages`: routes for the portfolio, blog, and legacy redirects
+- `src/content/blog`: markdown blog posts migrated from the old Jekyll site
+- `src/data/site.ts`: typed portfolio data for projects, talks, resume, and social links
+- `public/assets`: static media such as podcast audio and images
 
 ## Contact
 
-You can reach out to me at freesuraj@gmail.com or tweet me [@iOSCook](https://twitter.com/iOSCook)
+You can reach out at <mailto:freesuraj@gmail.com>.

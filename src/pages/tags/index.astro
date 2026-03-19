@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getTagSlug, getTags, sortPosts } from "../../lib/blog";
+
+const tags = getTags(sortPosts(await getCollection("blog")));
+---
+
+<BaseLayout title="Tags" description="Tags used across blog posts.">
+  <section class="panel">
+    <p class="eyebrow">Tags</p>
+    <h1 class="page-title">Topics</h1>
+    <p class="section-intro">A lightweight index across the writing archive.</p>
+    <div class="link-row">
+      {tags.map((tag) => <a class="tag-link" href={`/blog/tags/${getTagSlug(tag)}/`}>{tag}</a>)}
+    </div>
+  </section>
+</BaseLayout>

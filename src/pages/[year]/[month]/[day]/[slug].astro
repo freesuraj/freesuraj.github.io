@@ -1,0 +1,86 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { getLegacyPostUrl, getReadingTime, parseLegacyId, sortPosts } from "../../../../lib/blog";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => {
+    const { year, month, day, slug } = parseLegacyId(post.id);
+
+    return {
+      params: { year, month, day, slug },
+      props: { postId: post.id }
+    };
+  });
+}
+
+const { postId } = Astro.props;
+const post = await getEntry("blog", postId);
+
+if (!post) {
+  throw new Error(`Unable to find blog post for id: ${postId}`);
+}
+
+const { Content } = await render(post);
+const posts = sortPosts(await getCollection("blog"));
+const index = posts.findIndex((entry) => entry.id === post.id);
+const newerPost = index > 0 ? posts[index - 1] : null;
+const olderPost = index >= 0 && index < posts.length - 1 ? posts[index + 1] : null;
+const readingTime = getReadingTime(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="article-shell">
+    <header class="article-head">
+      <p class="eyebrow">Blog post</p>
+      <h1 class="article-title">{post.data.title}</h1>
+      <div class="meta">
+        <span>{post.data.date.toLocaleDateString("en-AU")}</span>
+        <span>{readingTime} min read</span>
+      </div>
+      <div class="link-row">
+        {(post.data.tags ?? []).map((tag) => (
+          <a class="tag-link" href={`/blog/tags/${tag.toLowerCase().replace(/\s+/g, "-")}/`}>
+            {tag}
+          </a>
+        ))}
+      </div>
+    </header>
+
+    <div class="article-prose">
+      <Content />
+    </div>
+
+    <nav class="article-nav">
+      {
+        newerPost ? (
+          <a class="button button-secondary" href={getLegacyPostUrl(newerPost)}>
+            Newer: {newerPost.data.title}
+          </a>
+        ) : <span></span>
+      }
+      {
+        olderPost ? (
+          <a class="button button-secondary" href={getLegacyPostUrl(olderPost)}>
+            Older: {olderPost.data.title}
+          </a>
+        ) : null
+      }
+    </nav>
+  </article>
+
+  <script type="module" is:inline>
+    const mermaidBlocks = document.querySelectorAll("pre.mermaid");
+
+    if (mermaidBlocks.length > 0) {
+      const mermaid = await import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs");
+      mermaid.default.initialize({ startOnLoad: false, theme: "neutral" });
+      mermaidBlocks.forEach((block) => {
+        block.innerHTML = block.textContent ?? "";
+      });
+      await mermaid.default.run({ querySelector: "pre.mermaid" });
+    }
+  </script>
+</BaseLayout>

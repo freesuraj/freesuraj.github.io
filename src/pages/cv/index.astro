@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const target = "/resume/";
+---
+
+<BaseLayout title="CV">
+  <section class="panel redirect-note">
+    <p class="eyebrow">Redirect</p>
+    <h1 class="page-title">The CV page moved</h1>
+    <p class="section-intro">
+      You are being redirected to the current resume page.
+    </p>
+    <p><a class="button button-primary" href={target}>Continue to resume</a></p>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+  </section>
+</BaseLayout>

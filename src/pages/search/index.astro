@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const target = "/blog/";
+---
+
+<BaseLayout title="Search">
+  <section class="panel redirect-note">
+    <p class="eyebrow">Redirect</p>
+    <h1 class="page-title">Search was retired</h1>
+    <p class="section-intro">
+      The old third-party search page is gone. The current writing archive is
+      available directly under the blog.
+    </p>
+    <p><a class="button button-primary" href={target}>Continue to blog</a></p>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+  </section>
+</BaseLayout>

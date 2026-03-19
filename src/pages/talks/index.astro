@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { recommendedTalks, talks } from "../../data/site";
+---
+
+<BaseLayout title="Talks" description="Talks and conference references by Suraj Pathak.">
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Talks</p>
+      <h1 class="page-title">Talks I’ve given and talks worth revisiting</h1>
+      <p class="section-intro">
+        A small archive of talks I’ve presented, followed by a short list of
+        conference sessions that still hold up.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-2">
+      {
+        talks.map((talk) => (
+          <article class="card">
+            <p class="eyebrow">{talk.date}</p>
+            <h3>{talk.title}</h3>
+            <p class="muted">{talk.summary}</p>
+            <div class="link-row">
+              <a class="button button-secondary" href={talk.embedUrl} target="_blank" rel="noreferrer">
+                Watch
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Recommended</p>
+        <h2>Conference sessions that shaped how I think</h2>
+      </div>
+    </div>
+    <div class="cards">
+      {
+        recommendedTalks.map((talk) => (
+          <article class="card">
+            <p class="eyebrow">{talk.conference}</p>
+            <h3>
+              <a href={talk.href} target="_blank" rel="noreferrer">{talk.title}</a>
+            </h3>
+            <p class="muted">{talk.author}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

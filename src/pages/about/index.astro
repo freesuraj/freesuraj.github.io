@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { principles, siteMeta, socialLinks } from "../../data/site";
+---
+
+<BaseLayout title="About" description="About Suraj Pathak">
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">About</p>
+      <h1 class="page-title">Builder, writer, and mobile engineer</h1>
+      <p class="section-intro">
+        I’m {siteMeta.title}, a Melbourne-based engineer working primarily on
+        iOS products and the systems around them. I care about maintainability,
+        delivery confidence, and making software easier to evolve over time.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={`mailto:${siteMeta.email}`}>Email me</a>
+        {socialLinks.slice(0, 2).map((link) => (
+          <a class="button button-secondary" href={link.href} target="_blank" rel="noreferrer">
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-2">
+      <article class="card">
+        <p class="eyebrow">What I optimise for</p>
+        <div class="section" style="margin-top: 0.8rem;">
+          {principles.map((principle) => <span class="pill">{principle}</span>)}
+        </div>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Outside work</p>
+        <p class="muted">
+          Coffee, road trips, basketball, Formula 1, and the occasional deep
+          dive into systems topics that have no immediate product value but make
+          me better at the practical work.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
