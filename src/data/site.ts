@@ -35,6 +35,20 @@ export const focusAreas = [
 
 export const experience = [
   {
+    company: "Butterfly Healthcare",
+    role: "Technical consultant (part-time contract)",
+    period: "2020 - Present",
+    summary:
+      "Do it all role from building iOS apps, helping with backend and infrastructure, and supporting the team with AI tools and engineering best practices.",
+    highlights: [
+            "Building iOS apps for hospital pre- and post-surgery management, focusing on reliability, usability, and patient/staff workflows." ,
+            "Oversee the entire technical stack end-to-end, from mobile architecture to backend/API integration and release engineering.",
+            "Manage AWS infrastructure and operational concerns (environments, deployments, monitoring/observability basics, security hygiene).",
+            "Introduce AI tools to accelerate development and improve team productivity (prototyping, automation, and documentation support).",
+            "Support hiring by reviewing candidates and contributing to interview loops; mentor engineers and drive engineering best practices.",
+    ]
+  },
+  {
     company: "ANZ",
     role: "Senior Mobile Engineer",
     period: "2025 - Present",
@@ -81,6 +95,20 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    title: "Omni: AI Notes & Flashcards",
+    summary: "Upload PDFs, notes, web content, audio files, or record live audio. Omni transcribes and analyzes everything to generate quizzes, flashcards, summaries, and insights.",
+    year: "2025",
+    href: "https://omnistudy.site",
+    featured: true
+  },
+  {
+    title: "Dockett: Job management for tradies & contractors",
+    summary: "A comprehensive job management app for tradies and contractors, streamlining project tracking, invoicing, and client communication.",
+    year: "2025",
+    href: "https://dockett.xyz",
+    featured: true
+  },
   {
     title: "Bulldog",
     summary: "A fast JSON parser for iOS and macOS built to keep app-side parsing simple and predictable.",
