@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const target = "/talks/";
+---
+
+<BaseLayout title="Conferences">
+  <section class="panel redirect-note">
+    <p class="eyebrow">Redirect</p>
+    <h1 class="page-title">Conference references moved</h1>
+    <p class="section-intro">
+      The conference material now lives inside the talks section.
+    </p>
+    <p><a class="button button-primary" href={target}>Continue to talks</a></p>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+  </section>
+</BaseLayout>

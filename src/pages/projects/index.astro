@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects } from "../../data/site";
+---
+
+<BaseLayout title="Projects" description="Open source projects and experiments by Suraj Pathak.">
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Projects</p>
+      <h1 class="page-title">Useful side projects and open source work</h1>
+      <p class="section-intro">
+        Small tools, mobile components, and experiments built to solve concrete
+        problems rather than fill a portfolio grid.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cards">
+      {
+        projects.map((project) => (
+          <article class="card">
+            <p class="eyebrow">{project.year}</p>
+            <h3>
+              <a href={project.href} target="_blank" rel="noreferrer">{project.title}</a>
+            </h3>
+            <p class="muted">{project.summary}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

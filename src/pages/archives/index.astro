@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getLegacyPostUrl, sortPosts } from "../../lib/blog";
+
+const posts = sortPosts(await getCollection("blog"));
+---
+
+<BaseLayout title="Archives" description="Archive of blog posts by Suraj Pathak.">
+  <section class="archive-list">
+    <p class="eyebrow">Archives</p>
+    <h1 class="page-title">Blog archive</h1>
+    {
+      posts.map((post) => (
+        <article class="archive-item">
+          <span class="muted">{post.data.date.toLocaleDateString("en-AU")}</span>
+          <a href={getLegacyPostUrl(post)}>{post.data.title}</a>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

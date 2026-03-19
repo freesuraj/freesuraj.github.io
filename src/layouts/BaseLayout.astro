@@ -1,0 +1,104 @@
+---
+import { siteMeta, socialLinks } from "../data/site";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = siteMeta.title,
+  description = siteMeta.description
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const pageTitle =
+  title === siteMeta.title ? siteMeta.title : `${title} | ${siteMeta.title}`;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/projects/", label: "Projects" },
+  { href: "/talks/", label: "Talks" },
+  { href: "/resume/", label: "Resume" },
+  { href: "/about/", label: "About" }
+];
+
+const canonicalUrl = new URL(pathname, Astro.site ?? siteMeta.url).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0e2a47" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="ambient ambient-a"></div>
+      <div class="ambient ambient-b"></div>
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-mark">SP</span>
+          <span>{siteMeta.title}</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          {
+            navItems.map((item) => (
+              <a
+                href={item.href}
+                class:list={[
+                  "nav-link",
+                  pathname === item.href ||
+                  (item.href !== "/" && pathname.startsWith(item.href))
+                    ? "is-active"
+                    : ""
+                ]}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </header>
+
+      <main class="page-frame">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <p class="eyebrow">Currently based in {siteMeta.location}</p>
+          <p class="footer-copy">
+            Portfolio, writing, talks, and side projects focused on thoughtful
+            mobile engineering.
+          </p>
+        </div>
+        <div class="footer-links">
+          {
+            socialLinks.map((link) => (
+              <a href={link.href} target="_blank" rel="noreferrer">
+                {link.label}
+              </a>
+            ))
+          }
+          <a href="/feed.xml">RSS</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

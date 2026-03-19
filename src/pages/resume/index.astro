@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { experience, focusAreas, siteMeta, socialLinks } from "../../data/site";
+---
+
+<BaseLayout title="Resume" description="Resume of Suraj Pathak">
+  <section class="resume-shell">
+    <p class="eyebrow">Resume</p>
+    <h1 class="page-title">{siteMeta.title}</h1>
+    <p class="section-intro">
+      {siteMeta.role} focused on mobile architecture, modernization, and
+      delivery systems.
+    </p>
+    <div class="meta" style="margin-top: 1rem;">
+      <span>{siteMeta.location}</span>
+      <span>{siteMeta.email}</span>
+      {socialLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Core areas</p>
+      <div class="link-row">
+        {focusAreas.map((area) => <span class="pill">{area}</span>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="timeline">
+      {
+        experience.map((item) => (
+          <article class="timeline-card">
+            <div class="meta">
+              <span>{item.role}</span>
+              <span>{item.company}</span>
+              <span>{item.period}</span>
+            </div>
+            <p>{item.summary}</p>
+            <ul>
+              {item.highlights.map((highlight) => <li>{highlight}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

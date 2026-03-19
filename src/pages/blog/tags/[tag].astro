@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import {
+  findPostsByTag,
+  getExcerpt,
+  getLegacyPostUrl,
+  getTagSlug,
+  getTags,
+  sortPosts
+} from "../../../lib/blog";
+
+export async function getStaticPaths() {
+  const posts = sortPosts(await getCollection("blog"));
+
+  return getTags(posts).map((tag) => ({
+    params: { tag: getTagSlug(tag) },
+    props: { tag }
+  }));
+}
+
+const { tag } = Astro.props;
+const posts = findPostsByTag(sortPosts(await getCollection("blog")), Astro.params.tag ?? "");
+---
+
+<BaseLayout title={`Tag: ${tag}`}>
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Tag</p>
+      <h1 class="page-title">{tag}</h1>
+      <p class="section-intro">
+        Posts filed under this topic.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cards">
+      {
+        posts.map((post) => (
+          <article class="post-card">
+            <p class="eyebrow">{post.data.date.toLocaleDateString("en-AU")}</p>
+            <h2><a href={getLegacyPostUrl(post)}>{post.data.title}</a></h2>
+            <p class="muted">{getExcerpt(post)}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

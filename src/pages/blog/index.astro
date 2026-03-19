@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getExcerpt, getLegacyPostUrl, getTags, getTagSlug, sortPosts } from "../../lib/blog";
+
+const posts = sortPosts(await getCollection("blog"));
+const tags = getTags(posts);
+---
+
+<BaseLayout title="Blog" description="Technical posts and notes by Suraj Pathak.">
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Blog</p>
+      <h1 class="page-title">Current posts</h1>
+      <p class="section-intro">
+        A focused archive of writing on mobile engineering, architecture,
+        concurrency, design tradeoffs, and the occasional systems tangent.
+      </p>
+      <div class="link-row">
+        {tags.map((tag) => <a class="tag-link" href={`/blog/tags/${getTagSlug(tag)}/`}>{tag}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cards">
+      {
+        posts.map((post) => (
+          <article class="post-card">
+            <p class="eyebrow">{post.data.date.toLocaleDateString("en-AU")}</p>
+            <h2>
+              <a href={getLegacyPostUrl(post)}>{post.data.title}</a>
+            </h2>
+            <p class="muted">{getExcerpt(post)}</p>
+            <div class="meta">
+              <span>{(post.data.tags ?? []).length} tags</span>
+            </div>
+            <div class="link-row">
+              {(post.data.tags ?? []).map((tag) => (
+                <a class="tag-link" href={`/blog/tags/${getTagSlug(tag)}/`}>
+                  {tag}
+                </a>
+              ))}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
