@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from "astro:content";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { siteMeta } from "../../../../data/site";
 import { getLegacyPostUrl, getReadingTime, parseLegacyId, sortPosts } from "../../../../lib/blog";
 
 export async function getStaticPaths() {
@@ -29,9 +30,34 @@ const index = posts.findIndex((entry) => entry.id === post.id);
 const newerPost = index > 0 ? posts[index - 1] : null;
 const olderPost = index >= 0 && index < posts.length - 1 ? posts[index + 1] : null;
 const readingTime = getReadingTime(post);
+const articleStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.description ?? "",
+  datePublished: post.data.date.toISOString(),
+  dateModified: post.data.date.toISOString(),
+  mainEntityOfPage: `${siteMeta.url}${getLegacyPostUrl(post)}`,
+  author: {
+    "@type": "Person",
+    name: siteMeta.title
+  },
+  publisher: {
+    "@type": "Person",
+    name: siteMeta.title
+  },
+  keywords: post.data.tags ?? []
+};
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  publishedTime={post.data.date.toISOString()}
+  modifiedTime={post.data.date.toISOString()}
+  structuredData={articleStructuredData}
+>
   <article class="article-shell">
     <header class="article-head">
       <p class="eyebrow">Blog post</p>

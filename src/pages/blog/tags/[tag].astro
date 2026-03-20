@@ -23,7 +23,7 @@ const { tag } = Astro.props;
 const posts = findPostsByTag(sortPosts(await getCollection("blog")), Astro.params.tag ?? "");
 ---
 
-<BaseLayout title={`Tag: ${tag}`}>
+<BaseLayout title={`Tag: ${tag}`} noindex={true}>
   <section class="section">
     <div class="panel">
       <p class="eyebrow">Tag</p>

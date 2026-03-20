@@ -6,7 +6,7 @@ import { getLegacyPostUrl, sortPosts } from "../../lib/blog";
 const posts = sortPosts(await getCollection("blog"));
 ---
 
-<BaseLayout title="Archives" description="Archive of blog posts by Suraj Pathak.">
+<BaseLayout title="Archives" description="Archive of blog posts by Suraj Pathak." noindex={true}>
   <section class="archive-list">
     <p class="eyebrow">Archives</p>
     <h1 class="page-title">Blog archive</h1>

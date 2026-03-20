@@ -2,19 +2,34 @@
 import { siteMeta, socialLinks } from "../data/site";
 import "../styles/global.css";
 
+type SchemaNode = Record<string, unknown>;
+
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  type?: "website" | "article" | "profile";
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  structuredData?: SchemaNode | SchemaNode[];
 }
 
 const {
   title = siteMeta.title,
-  description = siteMeta.description
+  description = siteMeta.description,
+  image = siteMeta.socialImage,
+  type = "website",
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+  structuredData
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const pageTitle =
   title === siteMeta.title ? siteMeta.title : `${title} | ${siteMeta.title}`;
+const siteUrl = Astro.site ?? new URL(siteMeta.url);
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -25,7 +40,38 @@ const navItems = [
   { href: "/about/", label: "About" }
 ];
 
-const canonicalUrl = new URL(pathname, Astro.site ?? siteMeta.url).toString();
+const canonicalUrl = new URL(pathname, siteUrl).toString();
+const socialImageUrl = new URL(image, siteUrl).toString();
+const robotsContent = noindex ? "noindex, follow" : "index, follow";
+const defaultStructuredData: SchemaNode[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteMeta.siteName,
+    url: siteMeta.url
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteMeta.title,
+    jobTitle: siteMeta.role,
+    url: siteMeta.url,
+    email: siteMeta.email,
+    homeLocation: {
+      "@type": "Place",
+      name: siteMeta.location
+    },
+    sameAs: socialLinks.map((link) => link.href)
+  }
+];
+const schemaData = [
+  ...defaultStructuredData,
+  ...(structuredData
+    ? Array.isArray(structuredData)
+      ? structuredData
+      : [structuredData]
+    : [])
+];
 ---
 
 <!doctype html>
@@ -34,11 +80,29 @@ const canonicalUrl = new URL(pathname, Astro.site ?? siteMeta.url).toString();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="robots" content={robotsContent} />
+    <meta name="author" content={siteMeta.title} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#0e2a47" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title={`${siteMeta.siteName} RSS`} href="/feed.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:site_name" content={siteMeta.siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={type} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content={`${siteMeta.siteName} portfolio and blog`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:creator" content="@realsurajp" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,8 +110,10 @@ const canonicalUrl = new URL(pathname, Astro.site ?? siteMeta.url).toString();
       rel="stylesheet"
     />
     <title>{pageTitle}</title>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <div class="ambient ambient-a"></div>
       <div class="ambient ambient-b"></div>
@@ -61,6 +127,12 @@ const canonicalUrl = new URL(pathname, Astro.site ?? siteMeta.url).toString();
             navItems.map((item) => (
               <a
                 href={item.href}
+                aria-current={
+                  pathname === item.href ||
+                  (item.href !== "/" && pathname.startsWith(item.href))
+                    ? "page"
+                    : undefined
+                }
                 class:list={[
                   "nav-link",
                   pathname === item.href ||
@@ -76,7 +148,7 @@ const canonicalUrl = new URL(pathname, Astro.site ?? siteMeta.url).toString();
         </nav>
       </header>
 
-      <main class="page-frame">
+      <main id="main-content" class="page-frame">
         <slot />
       </main>
 

@@ -3,7 +3,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://freesuraj.github.io",
+  site: "https://surajpathak.xyz",
   trailingSlash: "always",
   integrations: [mdx(), sitemap()],
   markdown: {

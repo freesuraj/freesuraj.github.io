@@ -1,12 +1,14 @@
 export const siteMeta = {
   title: "Suraj Pathak",
   shortTitle: "Suraj",
+  siteName: "Suraj Pathak",
   description:
     "Senior mobile engineer in Melbourne building reliable iOS products, modernizing legacy systems, and writing about engineering tradeoffs.",
-  url: "https://freesuraj.github.io",
+  url: "https://surajpathak.xyz",
   location: "Melbourne, Australia",
   email: "freesuraj@gmail.com",
-  role: "Senior Mobile Engineer"
+  role: "Senior Mobile Engineer",
+  socialImage: "/og-default.svg"
 };
 
 export const socialLinks = [

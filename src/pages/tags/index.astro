@@ -6,7 +6,7 @@ import { getTagSlug, getTags, sortPosts } from "../../lib/blog";
 const tags = getTags(sortPosts(await getCollection("blog")));
 ---
 
-<BaseLayout title="Tags" description="Tags used across blog posts.">
+<BaseLayout title="Tags" description="Tags used across blog posts." noindex={true}>
   <section class="panel">
     <p class="eyebrow">Tags</p>
     <h1 class="page-title">Topics</h1>
