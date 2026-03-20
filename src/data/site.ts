@@ -226,7 +226,7 @@ export const publications = [
     conference:
       "2011 International Green Computing Conference and Workshops (IGCC)",
     year: 2011,
-    href: "https://ieeexplore.ieee.org/document/6008592/"
+    href: "https://ieeexplore.ieee.org/abstract/document/6008592"
   },
   {
     title: "WAFTL: A Workload Adaptive Flash Translation Layer with Data Partition",
