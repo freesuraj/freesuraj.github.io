@@ -21,6 +21,9 @@ export const socialLinks = [
   }
 ];
 
+export const googleScholarUrl =
+  "https://scholar.google.com/citations?user=yqQmKg8AAAAJ&hl=en";
+
 export const principles = [
   "Modernize legacy code without stopping product delivery.",
   "Prefer simple systems that are easy to reason about under pressure.",
@@ -212,5 +215,36 @@ export const podcasts = [
     title: "iOS Memory Deep Dive",
     date: "2025-02-21",
     file: "/assets/audio/memory_deepdive.wav"
+  }
+];
+
+export const publications = [
+  {
+    title: "Power and endurance aware Flash-PCM memory system",
+    abstract:
+      "This paper examines two major Flash NAND problems: random-write latency and limited chip endurance. It explores a Flash-PCM memory design intended to improve write behavior and extend device lifetime while balancing performance and endurance tradeoffs.",
+    conference:
+      "2011 International Green Computing Conference and Workshops (IGCC)",
+    year: 2011,
+    href: "https://ieeexplore.ieee.org/document/6008592/"
+  },
+  {
+    title: "WAFTL: A Workload Adaptive Flash Translation Layer with Data Partition",
+    abstract:
+      "WAFTL proposes a workload-adaptive flash translation layer that switches between page-level and block-level mapping based on access patterns. The design reduces mapping-table size, lowers garbage-collection overhead, and improves performance under enterprise workloads through data partitioning and threshold-based migration.",
+    conference:
+      "2011 IEEE 27th Symposium on Mass Storage Systems and Technologies (MSST)",
+    year: 2011,
+    href: "https://msstconference.org/MSST-history/2011/Papers/Research/6.Wei.pdf"
+  },
+  {
+    title:
+      "FlashCoop: A Locality-Aware Cooperative Buffer Management for SSD-Based Storage Cluster",
+    abstract:
+      "FlashCoop presents a locality-aware cooperative buffer-management approach for SSD-based storage clusters. The work focuses on using locality information across the cluster to improve cache effectiveness, reduce unnecessary SSD traffic, and improve overall storage performance.",
+    conference:
+      "39th International Conference on Parallel Processing (ICPP)",
+    year: 2010,
+    href: "https://ieeexplore.ieee.org/document/5599244/"
   }
 ];

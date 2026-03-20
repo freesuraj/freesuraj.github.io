@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { googleScholarUrl, publications } from "../../data/site";
+
+const publicationsStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": publications.map((publication) => ({
+    "@type": "ScholarlyArticle",
+    headline: publication.title,
+    description: publication.abstract,
+    datePublished: `${publication.year}`,
+    isPartOf: {
+      "@type": "PublicationIssue",
+      name: publication.conference
+    },
+    url: publication.href
+  }))
+};
+---
+
+<BaseLayout
+  title="Publications"
+  description="Academic publications by Suraj Pathak, including conference papers on flash memory and storage systems."
+  structuredData={publicationsStructuredData}
+>
+  <section class="section">
+    <div class="panel">
+      <p class="eyebrow">Publications</p>
+      <h1 class="page-title">Academic publications</h1>
+      <p class="section-intro">
+        Earlier research publications focused on flash memory systems, storage
+        architecture, and performance tradeoffs in SSD-backed environments.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={googleScholarUrl} target="_blank" rel="noreferrer">
+          View Google Scholar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="timeline">
+      {
+        publications.map((publication) => (
+          <article class="timeline-card">
+            <div class="meta">
+              <span>{publication.conference}</span>
+              <span>{publication.year}</span>
+            </div>
+            <h2 style="margin: 0.35rem 0 0.7rem;">{publication.title}</h2>
+            <p class="muted">{publication.abstract}</p>
+            <div class="link-row">
+              <a class="button button-secondary" href={publication.href} target="_blank" rel="noreferrer">
+                Full paper
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

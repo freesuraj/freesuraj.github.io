@@ -1,5 +1,5 @@
 ---
-import { siteMeta, socialLinks } from "../data/site";
+import { googleScholarUrl, siteMeta, socialLinks } from "../data/site";
 import "../styles/global.css";
 
 type SchemaNode = Record<string, unknown>;
@@ -35,6 +35,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/blog/", label: "Blog" },
   { href: "/projects/", label: "Projects" },
+  { href: "/publications/", label: "Publications" },
   { href: "/talks/", label: "Talks" },
   { href: "/resume/", label: "Resume" },
   { href: "/about/", label: "About" }
@@ -168,6 +169,7 @@ const schemaData = [
               </a>
             ))
           }
+          <a href={googleScholarUrl} target="_blank" rel="noreferrer">Google Scholar</a>
           <a href="/feed.xml">RSS</a>
         </div>
       </footer>
